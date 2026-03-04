@@ -1,6 +1,6 @@
 # 情報アーキテクチャ設計書
 
-**Project:** Ikotsu Lab Information Architecture Design
+**Project:** Ikotsu.com Information Architecture Design
 **Layer:** Information Design
 **Version:** 1.0
 **Purpose:** SEO・GEO・CV最大化を同時実現するための情報アーキテクチャ設計
@@ -129,5 +129,5 @@ Cluster A：粉骨 / Cluster B：洗骨 / Cluster C：改葬前処理 / Cluster 
 
 ## 12. 最終目標
 
-Ikotsu Labを**遺骨整備情報の中心ハブにする。**
+Ikotsu.comを**遺骨整備情報の中心ハブにする。**
 検索も、導線も、収益も支配する。

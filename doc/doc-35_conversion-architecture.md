@@ -1,6 +1,6 @@
 # コンバージョン・ファネル最適化設計書
 
-**Project:** Ikotsu Lab Conversion Architecture & Funnel Optimization Design
+**Project:** Ikotsu.com Conversion Architecture & Funnel Optimization Design
 **Layer:** Strategy Design
 **Version:** 1.0
 **Purpose:** 粉骨・洗骨領域においてCV率を最大化し、単価と法人比率を同時に引き上げるための導線設計

@@ -1,6 +1,6 @@
 # アナリティクス・タグ実装仕様書
 
-**Project:** Ikotsu Lab Analytics & Tag Implementation Specification
+**Project:** Ikotsu.com Analytics & Tag Implementation Specification
 **Layer:** Measurement / 計測基盤設計
 **Version:** 1.0
 **Purpose:** 感覚ではなくデータで改善するための、完全な計測実装仕様を確定する

@@ -1,6 +1,6 @@
 # CV最適化・UX心理設計書
 
-**Project:** Ikotsu Lab Conversion Optimization & UX Psychology Design
+**Project:** Ikotsu.com Conversion Optimization & UX Psychology Design
 **Layer:** Revenue / UX Growth Engineering
 **Version:** 1.0
 **Purpose:** 感情が強く関与する遺骨サービス領域で、信頼を損なわずにCV率を最大化する設計

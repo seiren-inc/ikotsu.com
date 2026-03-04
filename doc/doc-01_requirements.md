@@ -1,6 +1,6 @@
 # 要件定義書
 
-**Project:** Ikotsu Lab Next-Gen Platform
+**Project:** Ikotsu.com Next-Gen Platform
 **Version:** 1.0
 **Goal:** 遺骨サービス業界で最も先進的で信頼性の高いWeb基盤構築
 

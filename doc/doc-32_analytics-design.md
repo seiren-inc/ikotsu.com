@@ -1,6 +1,6 @@
 # 計測・分析・データインテリジェンス設計書
 
-**Project:** Ikotsu Lab Analytics & Data Intelligence Design
+**Project:** Ikotsu.com Analytics & Data Intelligence Design
 **Layer:** Strategy / Functional Hybrid
 **Version:** 1.0
 **Purpose:** SEO・GEO・CV最適化を継続的に改善するための計測・分析・意思決定基盤設計

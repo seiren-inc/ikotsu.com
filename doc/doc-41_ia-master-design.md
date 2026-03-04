@@ -1,6 +1,6 @@
 # 情報アーキテクチャ マスター設計書
 
-**Project:** Ikotsu Lab Information Architecture Master Design
+**Project:** Ikotsu.com Information Architecture Master Design
 **Layer:** Information Architecture
 **Version:** 1.0
 **Purpose:** SEO・GEO・CV最大化を同時に実現するための完全IA設計

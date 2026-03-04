@@ -5,13 +5,13 @@ import { JsonLd, generateBreadcrumbSchema } from '@/lib/schema/jsonld';
 import styles from '@/components/layout/legal.module.css';
 
 export const metadata: Metadata = {
-  title: '会社情報・運営方針 | Ikotsu Lab｜粉骨・洗骨の専門機関',
-  description: 'Ikotsu Labを運営する会社情報。遺骨の取り扱いにおける専門機関としての運営方針、所在地などの企業概要をご覧いただけます。',
+  title: '会社情報・運営方針 | Ikotsu.com｜粉骨・洗骨の専門機関',
+  description: 'Ikotsu.comを運営する会社情報。遺骨の取り扱いにおける専門機関としての運営方針、所在地などの企業概要をご覧いただけます。',
   alternates: { canonical: '/company' },
 };
 
 const COMPANY_INFO = [
-  { label: '運営会社 / 屋号', value: '株式会社清蓮（Seiren Inc.） / Ikotsu Lab（遺骨ラボ）' },
+  { label: '運営会社 / 屋号', value: '株式会社清蓮（Seiren Inc.） / Ikotsu.com（遺骨.com）' },
   { label: '代表者', value: '（代表者名）' },
   { label: '設立', value: '（設立年月）' },
   { label: '所在地', value: '〒231-0000 神奈川県横浜市中区（詳細住所）\n※ご持込によるお預かりは事前ご予約制となっております。' },
@@ -51,7 +51,7 @@ export default function CompanyPage() {
             <div className={styles.section}>
               <h2 className={styles.heading}>運営方針（ポリシー）</h2>
               <p className={styles.text}>
-                Ikotsu Lab（遺骨ラボ）は、故人様のご遺骨を扱う専門機関として、透明性の高いサービス提供を約束します。
+                Ikotsu.com（遺骨.com）は、故人様のご遺骨を扱う専門機関として、透明性の高いサービス提供を約束します。
                 料金体系の明瞭化だけでなく、すべての工程をご遺族にご確認いただける「処理レポート」の発行や、
                 行政・法令に基づいた適正な処理を徹底しています。
               </p>

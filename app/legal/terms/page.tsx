@@ -5,8 +5,8 @@ import Breadcrumb from '@/components/ui/Breadcrumb';
 import styles from '@/components/layout/legal.module.css';
 
 export const metadata: Metadata = {
-  title: '利用規約 | Ikotsu Lab｜粉骨・洗骨の専門機関',
-  description: 'Ikotsu Labのサービス利用規約。ご遺骨のお預かり、処理に関する合意事項や免責事項について定めています。',
+  title: '利用規約 | Ikotsu.com｜粉骨・洗骨の専門機関',
+  description: 'Ikotsu.comのサービス利用規約。ご遺骨のお預かり、処理に関する合意事項や免責事項について定めています。',
   alternates: { canonical: '/legal/terms' },
 };
 
@@ -40,7 +40,7 @@ export default function TermsPage() {
             <div className={styles.section}>
               <h2 className={styles.heading}>第1条（目的と適用）</h2>
               <p className={styles.text}>
-                本規約は、Ikotsu Lab（以下「当機関」といいます）が提供する粉骨、洗骨、その他ご遺骨に関連する一切のサービス（以下「本サービス」といいます）の提供条件及び、当機関とお客様との間の権利義務関係を定めるものです。
+                本規約は、Ikotsu.com（以下「当機関」といいます）が提供する粉骨、洗骨、その他ご遺骨に関連する一切のサービス（以下「本サービス」といいます）の提供条件及び、当機関とお客様との間の権利義務関係を定めるものです。
                 お客様は、本サービスを利用することにより、本規約の全ての記載内容に同意したものとみなされます。
               </p>
             </div>

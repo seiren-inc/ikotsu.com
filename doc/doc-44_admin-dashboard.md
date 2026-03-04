@@ -1,6 +1,6 @@
 # 管理画面・バックオフィス設計書
 
-**Project:** Ikotsu Lab Admin Dashboard & Backoffice Management Design
+**Project:** Ikotsu.com Admin Dashboard & Backoffice Management Design
 **Layer:** Technical / Operational Architecture
 **Version:** 1.0
 **Purpose:** 問い合わせ対応・法人管理・単価分析を一元化する管理画面設計

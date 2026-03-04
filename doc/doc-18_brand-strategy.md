@@ -1,15 +1,15 @@
 # ブランド戦略設計書
 
-**Project:** Ikotsu Lab Brand Strategy Design
+**Project:** Ikotsu.com Brand Strategy Design
 **Layer:** Strategic Design
 **Version:** 1.0
-**Purpose:** 遺骨ラボを価格競争から脱却させ、「専門機関」として選ばれるブランドへ確立するための戦略設計
+**Purpose:** 遺骨.comを価格競争から脱却させ、「専門機関」として選ばれるブランドへ確立するための戦略設計
 
 ---
 
 ## 1. ブランドの再定義
 
-Ikotsu Labは「粉骨屋」ではない。
+Ikotsu.comは「粉骨屋」ではない。
 
 **ブランド定義：**
 遺骨整備専門機関
@@ -26,7 +26,7 @@ Bone Care Laboratory
 - 縦軸：価格
 - 横軸：専門性
 
-**高価格 × 高専門性 → Ikotsu Lab**
+**高価格 × 高専門性 → Ikotsu.com**
 （価格は適正。価値で選ばせる。）
 
 ---
@@ -83,7 +83,7 @@ Bone Care Laboratory
 ## 8. グループ連携ブランド設計
 
 **全体で一貫したトーン。**
-ブランド階層：清蓮グループ → Ikotsu Lab → 各供養サービス（散骨クルーズ、お墓探しナビ 等）
+ブランド階層：清蓮グループ → Ikotsu.com → 各供養サービス（散骨クルーズ、お墓探しナビ 等）
 
 ---
 
@@ -99,4 +99,4 @@ Bone Care Laboratory
 
 - **6ヶ月：**「粉骨 専門」検索上位
 - **12ヶ月：**法人からの指名問い合わせ発生
-- **最終目標：**遺骨整備といえばIkotsu Lab。
+- **最終目標：**遺骨整備といえばIkotsu.com。

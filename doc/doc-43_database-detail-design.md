@@ -1,6 +1,6 @@
 # データベース詳細設計書
 
-**Project:** Ikotsu Lab Database Detailed Design
+**Project:** Ikotsu.com Database Detailed Design
 **Layer:** Technical Architecture
 **Version:** 1.0
 **Purpose:** 診断・見積・法人管理・将来のマイページ化まで見据えたデータ構造の完全設計
@@ -154,4 +154,4 @@ created_at / status / monthly_volume / estimated_price（検索高速化）
 
 ## 15. 最終目標
 
-問い合わせを資産に変える。**Ikotsu Labをデータドリブン供養基盤へ。**
+問い合わせを資産に変える。**Ikotsu.comをデータドリブン供養基盤へ。**

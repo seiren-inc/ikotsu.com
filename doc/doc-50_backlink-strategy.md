@@ -1,6 +1,6 @@
 # 被リンク戦略・デジタルPR設計書
 
-**Project:** Ikotsu Lab Backlink Strategy & Digital PR Design
+**Project:** Ikotsu.com Backlink Strategy & Digital PR Design
 **Layer:** SEO Authority Growth
 **Version:** 1.0
 **Purpose:** 粉骨・洗骨分野で検索上位を安定化させるための被リンク戦略および権威構築設計
@@ -36,7 +36,7 @@ YMYLに近い分野は信頼重視。
 
 ### 4.2 共同記事制作
 
-寺院 × Ikotsu Lab / 散骨業者 × Ikotsu Lab（双方掲載）
+寺院 × Ikotsu.com / 散骨業者 × Ikotsu.com（双方掲載）
 
 ### 4.3 事例公開
 

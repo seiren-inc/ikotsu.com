@@ -1,6 +1,6 @@
 # UI仕様書マスター
 
-**Project:** Ikotsu Lab UI Specification Master
+**Project:** Ikotsu.com UI Specification Master
 **Layer:** Screen Design / UI仕様書
 **Version:** 1.0
 **Purpose:** Antigravityで再現性高く、最新アニメーション多用＋画像多用のモダンサイトを実装するための全画面UI仕様を確定する
@@ -20,7 +20,7 @@
 
 ### 2.1 Header（全ページ共通）
 
-**左：** ロゴ（Ikotsu Lab） / **中央：** ナビ / **右：** 主要CTAボタン
+**左：** ロゴ（Ikotsu.com） / **中央：** ナビ / **右：** 主要CTAボタン
 **ナビ項目：** サービス（プルダウン） / 法人の方へ / ガイド / 料金目安 / 会社情報 / お問い合わせ
 **サービスプルダウン：** 粉骨 / 洗骨 / 出張・搬送 / お引取り / ガイド
 **挙動：** スクロールで縮小 / 背景は半透明（blur） / 現在ページをアクティブ表示 / モバイルはハンバーガー

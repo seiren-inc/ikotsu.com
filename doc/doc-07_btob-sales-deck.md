@@ -1,6 +1,6 @@
 # BtoB営業資料構成設計書
 
-**Project:** Ikotsu Lab Corporate Sales Material
+**Project:** Ikotsu.com Corporate Sales Material
 **Goal:** 寺院・納骨堂・霊園との法人契約獲得
 
 ---
@@ -11,7 +11,7 @@
 
 - タイトル：粉骨・洗骨 専門パートナーのご提案
 - サブ：寺院・納骨堂・霊園様向け 外部委託モデル
-- ロゴ：Ikotsu Lab × 清蓮グループ
+- ロゴ：Ikotsu.com × 清蓮グループ
 
 ---
 
@@ -32,7 +32,7 @@
 
 ### 3. 解決策提示
 
-Ikotsu Labは「遺骨整備専門機関」として外部パートナー機能を提供。
+Ikotsu.comは「遺骨整備専門機関」として外部パートナー機能を提供。
 
 **提供内容：** 粉骨 / 洗骨 / 土泥除去 / 出張回収 / 大量ロット対応 / 緊急対応
 

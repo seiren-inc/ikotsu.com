@@ -5,8 +5,8 @@ import Breadcrumb from '@/components/ui/Breadcrumb';
 import styles from '@/components/layout/legal.module.css';
 
 export const metadata: Metadata = {
-  title: 'プライバシーポリシー | Ikotsu Lab｜粉骨・洗骨の専門機関',
-  description: 'Ikotsu Labのプライバシーポリシー。お客様の氏名、連絡先など、個人情報の取り扱いと保護に関する方針を明記しています。',
+  title: 'プライバシーポリシー | Ikotsu.com｜粉骨・洗骨の専門機関',
+  description: 'Ikotsu.comのプライバシーポリシー。お客様の氏名、連絡先など、個人情報の取り扱いと保護に関する方針を明記しています。',
   alternates: { canonical: '/legal/privacy' },
 };
 
@@ -40,7 +40,7 @@ export default function PrivacyPolicyPage() {
             <div className={styles.section}>
               <h2 className={styles.heading}>第1条（基本方針）</h2>
               <p className={styles.text}>
-                Ikotsu Lab（以下「当機関」といいます）は、お客様の個人情報の重要性を深く認識し、その保護を事業運営上の最重要事項の一つとして位置付けています。当機関は、個人情報の保護に関する法律（以下「個人情報保護法」といいます）およびその他の関連法令、ガイドライン等を遵守し、お客様からお預かりした個人情報を適正に取り扱います。
+                Ikotsu.com（以下「当機関」といいます）は、お客様の個人情報の重要性を深く認識し、その保護を事業運営上の最重要事項の一つとして位置付けています。当機関は、個人情報の保護に関する法律（以下「個人情報保護法」といいます）およびその他の関連法令、ガイドライン等を遵守し、お客様からお預かりした個人情報を適正に取り扱います。
               </p>
             </div>
           </ScrollReveal>
@@ -131,8 +131,8 @@ export default function PrivacyPolicyPage() {
               <h2 className={styles.heading}>第9条（お問い合わせ窓口）</h2>
               <p className={styles.text}>
                 本プライバシーポリシーおよび当機関の個人情報の取り扱いに関するご質問、ご意見、各種ご請求につきましては、以下の窓口までお問い合わせください。<br /><br />
-                <strong>Ikotsu Lab 個人情報お問い合わせ窓口</strong><br />
-                Email: info@ikotsu-lab.com
+                <strong>Ikotsu.com 個人情報お問い合わせ窓口</strong><br />
+                Email: info@ikotsu.com
               </p>
             </div>
           </ScrollReveal>

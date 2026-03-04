@@ -1,6 +1,6 @@
 # GEO最適化テンプレート設計書
 
-**Project:** Ikotsu Lab GEO Optimization Template Design
+**Project:** Ikotsu.com GEO Optimization Template Design
 **Layer:** Information Design
 **Version:** 1.0
 **Purpose:** 生成AI（ChatGPT・Perplexity・Gemini等）に引用・参照されるためのGEO最適化テンプレート設計
@@ -110,4 +110,4 @@ FAQ schema / Breadcrumb schema / LocalBusiness schema / Service schema
 ## 12. 最終目標
 
 検索結果だけでなく、AI回答内でも「専門機関」として扱われる。
-Ikotsu Labを**遺骨整備の標準情報源**にする。
+Ikotsu.comを**遺骨整備の標準情報源**にする。

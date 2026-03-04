@@ -1,6 +1,6 @@
 # BtoC問い合わせフォーム詳細設計書
 
-**Project:** Ikotsu Lab BtoC Contact Form Detailed Design
+**Project:** Ikotsu.com BtoC Contact Form Detailed Design
 **Layer:** Functional Design
 **Version:** 1.0
 **Purpose:** 個人顧客の問い合わせを最大化し、離脱を防ぎながら質の高いリードを取得するためのフォーム設計

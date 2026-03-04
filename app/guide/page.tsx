@@ -7,7 +7,7 @@ import { JsonLd, generateBreadcrumbSchema } from '@/lib/schema/jsonld';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'ガイド・基礎知識 | Ikotsu Lab',
+  title: 'ガイド・基礎知識 | Ikotsu.com',
   description:
     '粉骨・洗骨・散骨・改葬に関する基礎知識を専門機関の視点で解説。費用・法律・工程・保管方法など、安心して依頼するための情報を提供します。',
   alternates: { canonical: '/guide' },

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://ikotsu-lab.com/sitemap.xml',
+    sitemap: 'https://ikotsu.com/sitemap.xml',
   };
 }

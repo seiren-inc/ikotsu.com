@@ -1,6 +1,6 @@
 # Antigravity 最終実装総指示書
 
-**Project:** Ikotsu Lab Antigravity Final Implementation Master Instruction
+**Project:** Ikotsu.com Antigravity Final Implementation Master Instruction
 **Layer:** Execution / Antigravity実装総指示書
 **Version:** 1.0
 **Purpose:** これまで策定した全設計書を統合し、Antigravityで再現性高く実装させるための最終実装命令書
@@ -158,5 +158,5 @@ LCP < 2.5s / CLS < 0.1 / 不要JS排除 / 画像圧縮 / Lazy Load徹底
 
 ## 14. 最終ビジョン
 
-Ikotsu Labを粉骨・洗骨分野の標準プラットフォームへ。
+Ikotsu.comを粉骨・洗骨分野の標準プラットフォームへ。
 **専門性 × モダン × データ × AI で勝つ。**

@@ -1,6 +1,6 @@
 # セキュリティ設計・リスクコントロール設計書
 
-**Project:** Ikotsu Lab Security Architecture & Risk Control Design
+**Project:** Ikotsu.com Security Architecture & Risk Control Design
 **Layer:** Functional Design
 **Version:** 1.0
 **Purpose:** 遺骨関連という極めてセンシティブな領域において、法的・技術的・ブランド的リスクを最小化するためのセキュリティ設計
@@ -9,7 +9,7 @@
 
 ## 1. セキュリティ設計の前提
 
-Ikotsu Labは「遺骨」を扱う。通常のECよりも高い信頼水準が必要。
+Ikotsu.comは「遺骨」を扱う。通常のECよりも高い信頼水準が必要。
 **守る対象：** 個人情報 / 相談内容 / 遺骨状態情報 / 法人情報 / 価格情報 / ブランド信用
 **セキュリティは信頼の土台。**
 

@@ -1,6 +1,6 @@
 # BtoB戦略設計書
 
-**Project:** Ikotsu Lab BtoB Strategy Design
+**Project:** Ikotsu.com BtoB Strategy Design
 **Layer:** Strategic Design
 **Version:** 1.0
 **Purpose:** 寺院・納骨堂・霊園・関連事業者から継続受注を獲得し、安定収益基盤を構築するための戦略設計
@@ -28,7 +28,7 @@ BtoBは単発ではなく「継続処理市場」。
 
 **寺院・納骨堂側の課題：**
 粉骨設備を持たない / 人員不足 / 衛生管理に不安 / 処理品質のばらつき / 保管スペース問題 / 作業リスク / 法的トラブル回避
-Ikotsu Labはこれを"外部専門機関"として解決する。
+Ikotsu.comはこれを"外部専門機関"として解決する。
 
 ---
 

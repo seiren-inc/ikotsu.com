@@ -1,6 +1,6 @@
 # 法的表現・コンプライアンスガバナンス仕様書
 
-**Project:** Ikotsu Lab Legal Expression & Compliance Governance Specification
+**Project:** Ikotsu.com Legal Expression & Compliance Governance Specification
 **Layer:** Legal / 表現統制・法務設計
 **Version:** 1.0
 **Purpose:** 遺骨という高感度・準YMYL領域において、炎上・行政指導・誤認表示を防ぐための表現統制基準を確定する

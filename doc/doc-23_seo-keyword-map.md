@@ -1,6 +1,6 @@
 # SEOキーワードマスターマップ
 
-**Project:** Ikotsu Lab SEO Keyword Master Map
+**Project:** Ikotsu.com SEO Keyword Master Map
 **Layer:** Information Design
 **Version:** 1.0
 **Purpose:** 検索市場を構造的に制圧するためのキーワード完全マップ設計
@@ -101,5 +101,5 @@
 
 ## 13. 最終目標
 
-**粉骨といえばIkotsu Lab。**
+**粉骨といえばIkotsu.com。**
 検索結果を構造で支配する。

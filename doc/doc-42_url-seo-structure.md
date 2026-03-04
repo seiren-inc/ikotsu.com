@@ -1,6 +1,6 @@
 # URL戦略・SEO構造設計書
 
-**Project:** Ikotsu Lab URL Strategy & SEO Structure Design
+**Project:** Ikotsu.com URL Strategy & SEO Structure Design
 **Layer:** SEO / Information Architecture Deep Design
 **Version:** 1.0
 **Purpose:** 粉骨・洗骨領域で検索上位独占を狙うためのURL設計およびトピッククラスター完全定義

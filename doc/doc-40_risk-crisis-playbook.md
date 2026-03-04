@@ -1,6 +1,6 @@
 # リスク管理・危機対応プレイブック
 
-**Project:** Ikotsu Lab Risk Management & Crisis Response Playbook
+**Project:** Ikotsu.com Risk Management & Crisis Response Playbook
 **Layer:** Strategic Risk Control
 **Version:** 1.0
 **Purpose:** 遺骨という極めてセンシティブな領域において、炎上・法的問題・誤解・事故発生時に即時対応できる危機管理設計

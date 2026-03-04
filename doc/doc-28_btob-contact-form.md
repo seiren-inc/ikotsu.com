@@ -1,6 +1,6 @@
 # 法人専用フォーム（BtoB）詳細設計書
 
-**Project:** Ikotsu Lab BtoB Inquiry & Lead Capture Detailed Design
+**Project:** Ikotsu.com BtoB Inquiry & Lead Capture Detailed Design
 **Layer:** Functional Design
 **Version:** 1.0
 **Purpose:** 寺院・納骨堂・霊園・関連法人から高品質な商談リードを獲得するための法人専用フォーム設計

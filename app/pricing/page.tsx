@@ -6,9 +6,9 @@ import PricingSimulator from './PricingSimulator';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: '料金目安 | Ikotsu Lab｜粉骨・洗骨の専門機関',
+  title: '料金目安 | Ikotsu.com｜粉骨・洗骨の専門機関',
   description:
-    '粉骨・洗骨・出張搬送・お引取りの料金目安一覧。Ikotsu Labは追加料金なし・事前見積もり無料。遺骨の量・状態・オプションを選んで費用をシミュレーションできます。',
+    '粉骨・洗骨・出張搬送・お引取りの料金目安一覧。Ikotsu.comは追加料金なし・事前見積もり無料。遺骨の量・状態・オプションを選んで費用をシミュレーションできます。',
   alternates: { canonical: '/pricing' },
 };
 

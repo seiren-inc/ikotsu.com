@@ -1,6 +1,6 @@
 # コンテンツ権威性構築設計書
 
-**Project:** Ikotsu Lab Content Architecture & Authority Building Design
+**Project:** Ikotsu.com Content Architecture & Authority Building Design
 **Layer:** Strategy Design
 **Version:** 1.0
 **Purpose:** 粉骨・洗骨分野で圧倒的専門性を確立し、SEO・GEO双方で業界トップを取るためのコンテンツ設計
@@ -101,5 +101,5 @@ JSON-LDで実装。
 
 ## 13. 最終目標
 
-**粉骨・洗骨といえばIkotsu Lab。**
+**粉骨・洗骨といえばIkotsu.com。**
 専門性で業界を制圧する。

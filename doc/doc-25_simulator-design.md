@@ -1,6 +1,6 @@
 # 料金シミュレーター詳細機能設計書
 
-**Project:** Ikotsu Lab Price Simulator Detailed Functional Design
+**Project:** Ikotsu.com Price Simulator Detailed Functional Design
 **Layer:** Functional Design
 **Version:** 1.0
 **Purpose:** CV率最大化と単価向上を同時に実現する料金シミュレーターの詳細設計

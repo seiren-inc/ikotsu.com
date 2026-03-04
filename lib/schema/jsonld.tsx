@@ -5,8 +5,8 @@ export function generateOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Ikotsu Lab（遺骨ラボ）',
-    alternateName: '遺骨ラボ',
+    name: 'Ikotsu.com（遺骨.com）',
+    alternateName: '遺骨.com',
     url: SITE_URL,
     logo: `${SITE_URL}/images/logo.png`,
     description: '粉骨・洗骨の専門機関。工程公開・料金透明・全国対応。',
@@ -36,10 +36,10 @@ export function generateLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Ikotsu Lab（遺骨ラボ）',
+    name: 'Ikotsu.com（遺骨.com）',
     url: SITE_URL,
     telephone: '0120-000-000',
-    email: 'info@ikotsu-lab.com',
+    email: 'info@ikotsu.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '（詳細住所）',
@@ -107,7 +107,7 @@ export function generateServiceSchema(params: {
     url: `${SITE_URL}${params.url}`,
     provider: {
       '@type': 'Organization',
-      name: params.provider || 'Ikotsu Lab（遺骨ラボ）',
+      name: params.provider || 'Ikotsu.com（遺骨.com）',
     },
     areaServed: {
       '@type': 'Country',
@@ -136,11 +136,11 @@ export function generateArticleSchema(params: {
     dateModified: params.dateModified,
     author: {
       '@type': 'Organization',
-      name: params.author || 'Ikotsu Lab（遺骨ラボ）',
+      name: params.author || 'Ikotsu.com（遺骨.com）',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Ikotsu Lab（遺骨ラボ）',
+      name: 'Ikotsu.com（遺骨.com）',
       logo: {
         '@type': 'ImageObject',
         url: `${SITE_URL}/images/logo.png`,

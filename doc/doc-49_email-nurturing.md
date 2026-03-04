@@ -1,6 +1,6 @@
 # メールナーチャリング・フォローアップ自動化設計書
 
-**Project:** Ikotsu Lab Email Nurturing & Follow-up Automation Design
+**Project:** Ikotsu.com Email Nurturing & Follow-up Automation Design
 **Layer:** Growth / LTV Design
 **Version:** 1.0
 **Purpose:** 問い合わせ後の放置を防ぎ、成約率と単価を引き上げるフォローアップ設計

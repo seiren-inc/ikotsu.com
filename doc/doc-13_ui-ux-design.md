@@ -1,6 +1,6 @@
 # UI/UX詳細アーキテクチャ設計書
 
-**Project:** Ikotsu Lab Next-Generation Platform
+**Project:** Ikotsu.com Next-Generation Platform
 **Purpose:** 情報理解・安心感・CV最大化を同時実現する画面単位のUI/UX詳細設計
 
 ---

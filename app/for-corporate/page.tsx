@@ -8,7 +8,7 @@ import { JsonLd, generateBreadcrumbSchema } from '@/lib/schema/jsonld';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: '法人・寺院からの業務委託・ご依頼 | Ikotsu Lab',
+  title: '法人・寺院からの業務委託・ご依頼 | Ikotsu.com',
   description: '寺院・納骨堂・霊園・葬儀社など法人様専門のご依頼窓口。月間まとめ処理・継続提携・業務委託に対応。守秘義務を徹底し、専任担当者がワンストップでサポートいたします。まずは無料でご相談・資料請求を。',
   alternates: { canonical: '/for-corporate' },
 };
@@ -54,7 +54,7 @@ export default function ForCorporatePage() {
             <h1 className={styles.heroTitle}>確実な処理と厳格な情報管理で、<br />貴院・貴社の業務をバックアップ</h1>
             <p className={styles.heroLead}>
               安定した品質の粉骨・洗骨処理を、継続依頼・業務提携のスキームで提供いたします。<br />
-              寺院、納骨堂、葬儀社をはじめとする多様な法人様における「ご遺骨の管理・処理」の課題を、専門機関である Ikotsu Lab がワンストップで解決します。
+              寺院、納骨堂、葬儀社をはじめとする多様な法人様における「ご遺骨の管理・処理」の課題を、専門機関である Ikotsu.com がワンストップで解決します。
             </p>
             <div className={styles.heroActions}>
               <Button href="#contact" variant="primary" size="lg">法人相談・見積もり（無料）</Button>
@@ -98,7 +98,7 @@ export default function ForCorporatePage() {
               </ul>
             </FadeIn>
             <FadeIn direction="right" className={styles.solutionCardAlt}>
-              <div className={styles.solutionHeaderGood}>Ikotsu Labの導入で</div>
+              <div className={styles.solutionHeaderGood}>Ikotsu.comの導入で</div>
               <ul className={styles.solutionListAlt}>
                 <li><span className={styles.highlight}>月数十件〜の大型案件・一括処理</span>にも専用設備と人員で余裕をもって対応</li>
                 <li>自社のリソースを本来のコア業務（顧客対応等）に集中できる</li>

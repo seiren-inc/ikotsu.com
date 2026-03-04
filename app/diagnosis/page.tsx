@@ -5,7 +5,7 @@ import Breadcrumb from '@/components/ui/Breadcrumb';
 import { JsonLd, generateBreadcrumbSchema } from '@/lib/schema/jsonld';
 
 export const metadata: Metadata = {
-  title: 'AI無料診断 — 最適なサービスを30秒で | Ikotsu Lab',
+  title: 'AI無料診断 — 最適なサービスを30秒で | Ikotsu.com',
   description:
     '遺骨の状態とご希望に合わせて、最適なサービスをAIが提案。4つの質問に答えるだけで粉骨・洗骨・搬送から最適プランをご案内します。',
   alternates: { canonical: '/diagnosis' },

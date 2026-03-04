@@ -1,6 +1,6 @@
 # 内部リンク戦略設計書
 
-**Project:** Ikotsu Lab Internal Linking Strategy Design
+**Project:** Ikotsu.com Internal Linking Strategy Design
 **Layer:** Information Design
 **Version:** 1.0
 **Purpose:** SEO評価最大化・回遊率向上・CV導線強化を同時実現する内部リンク設計を確定する

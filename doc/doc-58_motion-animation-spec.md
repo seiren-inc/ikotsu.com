@@ -1,6 +1,6 @@
 # 高度モーション・アニメーション実装仕様書
 
-**Project:** Ikotsu Lab Advanced Motion & Animation Implementation Specification
+**Project:** Ikotsu.com Advanced Motion & Animation Implementation Specification
 **Layer:** Motion Engineering / 最先端アニメーション実装設計
 **Version:** 1.0
 **Purpose:** モダンで洗練された印象を与えつつ、パフォーマンスを落とさない高度アニメーション仕様を確定する

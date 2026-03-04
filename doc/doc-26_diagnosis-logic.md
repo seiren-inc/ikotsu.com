@@ -1,6 +1,6 @@
 # AI診断ロジック詳細設計書
 
-**Project:** Ikotsu Lab AI Diagnosis Logic Detailed Design
+**Project:** Ikotsu.com AI Diagnosis Logic Detailed Design
 **Layer:** Functional Design
 **Version:** 1.0
 **Purpose:** ユーザーの不安を可視化し、最適サービスへ自動誘導する診断ロジック設計

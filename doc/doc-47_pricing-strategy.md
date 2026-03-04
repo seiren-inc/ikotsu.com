@@ -1,6 +1,6 @@
 # 価格戦略・収益アーキテクチャ設計書
 
-**Project:** Ikotsu Lab Pricing Strategy & Revenue Architecture Design
+**Project:** Ikotsu.com Pricing Strategy & Revenue Architecture Design
 **Layer:** Strategy / Revenue Design
 **Version:** 1.0
 **Purpose:** 価格競争に陥らず、単価と信頼を同時に高めるための価格戦略設計
@@ -10,7 +10,7 @@
 ## 1. 設計目的
 
 粉骨業界は価格差が激しい（安価業者5,000円台〜高価格帯30,000円以上）。
-**Ikotsu Labは最安値を目指さない。**
+**Ikotsu.comは最安値を目指さない。**
 目標：信頼価格帯の確立 / 単価向上 / 法人安定収益 / 価格交渉減少
 
 ---

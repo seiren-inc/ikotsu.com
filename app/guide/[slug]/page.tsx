@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!article) return {};
 
   return {
-    title: `${article.title} | Ikotsu Lab｜粉骨・洗骨の専門機関`,
+    title: `${article.title} | Ikotsu.com｜粉骨・洗骨の専門機関`,
     description: article.description,
     alternates: { canonical: `/guide/${slug}` },
   };
@@ -97,7 +97,7 @@ export default async function GuideArticlePage({ params }: Props) {
                 <h1 className={styles.articleHeaderTitle}>{article.title}</h1>
                 <div className={styles.articleHeaderMeta}>
                   <span>🕒 読了目安：{article.readTime}</span>
-                  <span>✍️ Ikotsu Lab カスタマーサクセスチーム</span>
+                  <span>✍️ Ikotsu.com カスタマーサクセスチーム</span>
                 </div>
               </FadeIn>
             </div>
@@ -119,7 +119,7 @@ export default async function GuideArticlePage({ params }: Props) {
               }}>
                 <h2 style={{ fontSize: 'var(--text-lg)', fontWeight: 'var(--font-bold)', marginBottom: 'var(--space-3)' }}>この記事の要約</h2>
                 <p style={{ fontSize: 'var(--text-sm)', color: 'var(--text-secondary)', lineHeight: 'var(--leading-relaxed)' }}>
-                  {article.description} 当ページでは、専門機関である Ikotsu Lab の視点から、正確で法規制やトラブル防止に配慮した解説を行います。
+                  {article.description} 当ページでは、専門機関である Ikotsu.com の視点から、正確で法規制やトラブル防止に配慮した解説を行います。
                 </p>
               </div>
 
@@ -136,9 +136,9 @@ export default async function GuideArticlePage({ params }: Props) {
                 display: 'flex', gap: 'var(--space-6)', background: 'var(--bg-elevated)', border: '1px solid var(--border-light)', padding: 'var(--space-8)', borderRadius: 'var(--radius-xl)'
               }}>
                 <div style={{ flex: 1 }}>
-                  <h3 style={{ fontSize: 'var(--text-base)', fontWeight: 'var(--font-bold)', marginBottom: 'var(--space-2)' }}>監修・執筆：Ikotsu Lab 編集部</h3>
+                  <h3 style={{ fontSize: 'var(--text-base)', fontWeight: 'var(--font-bold)', marginBottom: 'var(--space-2)' }}>監修・執筆：Ikotsu.com 編集部</h3>
                   <p style={{ fontSize: 'var(--text-sm)', color: 'var(--text-secondary)', lineHeight: 'var(--leading-relaxed)' }}>
-                    Ikotsu Lab は、国土交通省のガイドラインおよび関連法令を遵守し、年間多数の粉骨・洗骨処理を行う専門機関です。遺骨というデリケートな対象を扱うプロフェッショナルとして、正確で透明性のある情報発信に努めています。
+                    Ikotsu.com は、国土交通省のガイドラインおよび関連法令を遵守し、年間多数の粉骨・洗骨処理を行う専門機関です。遺骨というデリケートな対象を扱うプロフェッショナルとして、正確で透明性のある情報発信に努めています。
                   </p>
                 </div>
               </div>

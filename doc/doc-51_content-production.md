@@ -1,6 +1,6 @@
 # コンテンツ制作・編集運用設計書
 
-**Project:** Ikotsu Lab Content Production & Editorial Operations Design
+**Project:** Ikotsu.com Content Production & Editorial Operations Design
 **Layer:** SEO Execution / Operational Design
 **Version:** 1.0
 **Purpose:** 粉骨・洗骨分野で検索トップを取り続けるためのコンテンツ量産・品質管理体制設計

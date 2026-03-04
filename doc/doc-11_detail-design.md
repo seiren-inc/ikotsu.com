@@ -1,6 +1,6 @@
 # 詳細設計書
 
-**Project:** Ikotsu Lab Next-Generation Platform
+**Project:** Ikotsu.com Next-Generation Platform
 **Version:** 1.0
 **Scope:** DB設計 / API設計 / 画面詳細 / コンポーネント / SEO構造化データ / 運用設計（実装直前レベル）
 

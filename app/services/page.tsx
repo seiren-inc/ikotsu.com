@@ -9,8 +9,8 @@ import { JsonLd, generateBreadcrumbSchema } from '@/lib/schema/jsonld';
 import styles from './service.module.css';
 
 export const metadata: Metadata = {
-  title: '専門サービス一覧｜粉骨・洗骨の専門機関 Ikotsu Lab',
-  description: 'Ikotsu Labの提供する専門処理サービス（粉骨・洗骨・出張引取り等）の一覧と比較表。散骨・手元供養・改葬など、目的に合わせた最適なプランと料金をご確認いただけます。',
+  title: '専門サービス一覧｜粉骨・洗骨の専門機関 Ikotsu.com',
+  description: 'Ikotsu.comの提供する専門処理サービス（粉骨・洗骨・出張引取り等）の一覧と比較表。散骨・手元供養・改葬など、目的に合わせた最適なプランと料金をご確認いただけます。',
   alternates: {
     canonical: '/services',
   },

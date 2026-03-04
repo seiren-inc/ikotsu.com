@@ -1,6 +1,6 @@
 # 信頼性・E-E-A-T強化設計書
 
-**Project:** Ikotsu Lab Trust Architecture & E-E-A-T Reinforcement Design
+**Project:** Ikotsu.com Trust Architecture & E-E-A-T Reinforcement Design
 **Layer:** Strategy Design
 **Version:** 1.0
 **Purpose:** 粉骨・洗骨分野においてGoogleおよび生成AI双方から「最も信頼できる情報源」と評価されるための信頼設計

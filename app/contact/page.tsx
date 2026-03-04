@@ -6,9 +6,9 @@ import { JsonLd, generateBreadcrumbSchema } from '@/lib/schema/jsonld';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'お問い合わせ・無料相談 | Ikotsu Lab｜粉骨・洗骨の専門機関',
+  title: 'お問い合わせ・無料相談 | Ikotsu.com｜粉骨・洗骨の専門機関',
   description:
-    '粉骨・洗骨・出張搬送などのご相談はこちら。Ikotsu Labは無料相談受付中。フォーム・電話どちらでも対応。2営業日以内にご連絡します。',
+    '粉骨・洗骨・出張搬送などのご相談はこちら。Ikotsu.comは無料相談受付中。フォーム・電話どちらでも対応。2営業日以内にご連絡します。',
   alternates: { canonical: '/contact' },
 };
 

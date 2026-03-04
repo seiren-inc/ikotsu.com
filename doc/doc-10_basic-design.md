@@ -1,6 +1,6 @@
 # システム基本設計書
 
-**Project:** Ikotsu Lab Next-Generation Platform
+**Project:** Ikotsu.com Next-Generation Platform
 **Version:** 1.0
 **Author:** Seiren Group
 

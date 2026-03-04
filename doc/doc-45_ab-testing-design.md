@@ -1,6 +1,6 @@
 # A/Bテスト・実験設計書
 
-**Project:** Ikotsu Lab A/B Testing & Experimentation Design
+**Project:** Ikotsu.com A/B Testing & Experimentation Design
 **Layer:** Growth Optimization
 **Version:** 1.0
 **Purpose:** CV率・単価・法人比率を継続的に改善するための実験設計と運用フレームを確定する

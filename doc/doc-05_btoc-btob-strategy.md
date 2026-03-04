@@ -1,13 +1,13 @@
 # BtoC/BtoB統合機能設計書
 
-**Project:** Ikotsu Lab Dual Market Strategy
+**Project:** Ikotsu.com Dual Market Strategy
 **Goal:** 粉骨・洗骨の専門業者として業界トップポジション獲得
 
 ---
 
 ## 1. 戦略設計
 
-Ikotsu Labを **「遺骨整備の専門機関」** として再定義する。
+Ikotsu.comを **「遺骨整備の専門機関」** として再定義する。
 
 市場を2つに分ける：
 
@@ -135,4 +135,4 @@ Ikotsu Labを **「遺骨整備の専門機関」** として再定義する。
 | BtoC | 検索トップ         |
 | BtoB | 業界内指名検索獲得 |
 
-Ikotsu Labを **「遺骨整備の専門機関」** として確立する。
+Ikotsu.comを **「遺骨整備の専門機関」** として確立する。

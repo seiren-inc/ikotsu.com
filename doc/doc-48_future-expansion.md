@@ -1,15 +1,15 @@
 # 将来拡張・プラットフォームアーキテクチャ設計書
 
-**Project:** Ikotsu Lab Future Expansion & Platform Architecture Design
+**Project:** Ikotsu.com Future Expansion & Platform Architecture Design
 **Layer:** Long-Term Strategic Architecture
 **Version:** 1.0
-**Purpose:** 遺骨ラボを単体サービスで終わらせず、供養インフラへ進化させるための拡張設計
+**Purpose:** 遺骨.comを単体サービスで終わらせず、供養インフラへ進化させるための拡張設計
 
 ---
 
 ## 1. 設計目的
 
-Ikotsu Labは粉骨業者では終わらない。
+Ikotsu.comは粉骨業者では終わらない。
 **目標：** 供養前処理の標準化 / 法人外注インフラ化 / 顧客データ資産化 / 清蓮グループ統合基盤化
 単発サイトではなく、拡張可能な基盤を作る。
 
@@ -75,7 +75,7 @@ Stripe連携 / 法人請求書払い / 定期契約自動請求
 
 ## 10. 競争優位の本質
 
-他社は単発処理。Ikotsu Labは：処理前 / 処理中 / 処理後 / 関連供養を全て繋ぐ。
+他社は単発処理。Ikotsu.comは：処理前 / 処理中 / 処理後 / 関連供養を全て繋ぐ。
 **ここが決定的差。**
 
 ---

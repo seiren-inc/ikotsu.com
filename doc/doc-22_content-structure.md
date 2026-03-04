@@ -1,6 +1,6 @@
 # コンテンツ構造設計書
 
-**Project:** Ikotsu Lab Content Structure Design
+**Project:** Ikotsu.com Content Structure Design
 **Layer:** Information Design
 **Version:** 1.0
 **Purpose:** SEO・GEO・CVを最大化するためのコンテンツ構造を論理的に設計する
@@ -114,5 +114,5 @@ F. 事例・信頼コンテンツ
 
 ## 12. 最終目標
 
-Ikotsu Labを**遺骨整備情報の百科事典**にする。
+Ikotsu.comを**遺骨整備情報の百科事典**にする。
 情報量ではなく、構造で勝つ。

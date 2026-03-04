@@ -1,6 +1,6 @@
 # デザインシステム仕様書
 
-**Project:** Ikotsu Lab Design System Specification
+**Project:** Ikotsu.com Design System Specification
 **Layer:** Design System / UI基盤
 **Version:** 1.0
 **Purpose:** 画像多用・アニメーション多用でも崩れない、全ページ統一のデザイン規格を確定する

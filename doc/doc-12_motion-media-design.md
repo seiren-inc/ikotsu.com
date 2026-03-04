@@ -1,6 +1,6 @@
 # モーション・メディア設計書
 
-**Project:** Ikotsu Lab Next-Generation Platform
+**Project:** Ikotsu.com Next-Generation Platform
 **Purpose:** 最先端のアニメーションと画像設計で、信頼感と視認性とCVを同時に最大化する
 
 ---

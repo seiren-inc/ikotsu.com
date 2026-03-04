@@ -1,6 +1,6 @@
 # ビジュアルアイデンティティ＆高度モーション設計書
 
-**Project:** Ikotsu Lab Visual Identity & Advanced Motion System Design
+**Project:** Ikotsu.com Visual Identity & Advanced Motion System Design
 **Layer:** Strategy / Experience Design
 **Version:** 1.0
 **Purpose:** 最先端かつ信頼感のあるビジュアル設計で「専門機関ブランド」を視覚的に確立する

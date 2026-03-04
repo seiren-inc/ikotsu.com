@@ -1,15 +1,15 @@
 # エコシステム統合戦略設計書
 
-**Project:** Ikotsu Lab Ecosystem Integration Strategy Design
+**Project:** Ikotsu.com Ecosystem Integration Strategy Design
 **Layer:** Strategic Design
 **Version:** 1.0
-**Purpose:** 清蓮グループ全体のサービスと遺骨ラボを統合し、単発受注から循環型収益モデルへ進化させる戦略設計
+**Purpose:** 清蓮グループ全体のサービスと遺骨.comを統合し、単発受注から循環型収益モデルへ進化させる戦略設計
 
 ---
 
 ## 1. エコシステム戦略の定義
 
-Ikotsu Labは単体事業ではない。
+Ikotsu.comは単体事業ではない。
 
 **役割：** 清蓮グループの入口インフラ。
 遺骨整備を起点に、次の供養サービスへ自然に接続する。
@@ -56,7 +56,7 @@ Ikotsu Labは単体事業ではない。
 **将来構想：**
 顧客ID統合 / 問い合わせ履歴共有 / クロスサービス履歴連携 / 紹介トラッキング
 
-Ikotsu Labをデータハブにする。
+Ikotsu.comをデータハブにする。
 
 ---
 
@@ -108,5 +108,5 @@ Win-Win構造。
 
 ## 10. 中期ビジョン
 
-Ikotsu Labを**「供養前の標準入口」**にする。
+Ikotsu.comを**「供養前の標準入口」**にする。
 全供養の起点を握る。

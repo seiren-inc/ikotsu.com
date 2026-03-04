@@ -1,13 +1,13 @@
 # BtoB営業・パートナーシップ戦略設計書
 
-**Project:** Ikotsu Lab BtoB Growth Strategy
+**Project:** Ikotsu.com BtoB Growth Strategy
 **Goal:** 寺院・納骨堂・霊園からの継続受注獲得
 
 ---
 
 ## 1. 市場ポジショニング
 
-Ikotsu Labは「粉骨業者」ではない。
+Ikotsu.comは「粉骨業者」ではない。
 
 **ポジション：** "遺骨整備専門パートナー"
 
@@ -135,4 +135,4 @@ Ikotsu Labは「粉骨業者」ではない。
 - 請求管理
 - ステータス管理
 
-Ikotsu Labを **"業界標準インフラ"** へ。
+Ikotsu.comを **"業界標準インフラ"** へ。

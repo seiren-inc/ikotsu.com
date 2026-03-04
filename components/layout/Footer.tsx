@@ -60,7 +60,7 @@ export default function Footer() {
         <div className={styles.top}>
           {/* Brand */}
           <div className={styles.brand}>
-            <Link href="/" className={styles.logo} aria-label="Ikotsu Lab トップページ">
+            <Link href="/" className={styles.logo} aria-label="Ikotsu.com トップページ">
               <span className={styles.logoMark}>Ikotsu</span>
               <span className={styles.logoAccent}>Lab</span>
             </Link>
@@ -127,11 +127,11 @@ export default function Footer() {
             <p>〒231-0000 神奈川県横浜市中区（詳細住所）</p>
             <p>
               TEL：<a href="tel:0120-000-000">0120-000-000</a>
-              {' '}／ MAIL：<a href="mailto:info@ikotsu-lab.com">info@ikotsu-lab.com</a>
+              {' '}／ MAIL：<a href="mailto:info@ikotsu.com">info@ikotsu.com</a>
             </p>
           </div>
           <p className={styles.copyright}>
-            © {new Date().getFullYear()} Ikotsu Lab / 株式会社清蓮. All rights reserved.
+            © {new Date().getFullYear()} Ikotsu.com / 株式会社清蓮. All rights reserved.
           </p>
         </div>
       </div>

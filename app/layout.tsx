@@ -24,17 +24,17 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: 'Ikotsu Lab｜粉骨・洗骨の専門機関',
+  title: 'Ikotsu.com｜粉骨・洗骨の専門機関',
   description:
-    '粉骨・洗骨の専門機関 Ikotsu Lab（遺骨ラボ）。工程公開・料金透明・全国対応。散骨・改葬・保存のための遺骨前処理を専門機関品質で提供します。',
-  metadataBase: new URL('https://ikotsu-lab.com'),
+    '粉骨・洗骨の専門機関 Ikotsu.com（遺骨.com）。工程公開・料金透明・全国対応。散骨・改葬・保存のための遺骨前処理を専門機関品質で提供します。',
+  metadataBase: new URL('https://ikotsu.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'ja_JP',
-    siteName: 'Ikotsu Lab｜粉骨・洗骨の専門機関',
+    siteName: 'Ikotsu.com｜粉骨・洗骨の専門機関',
   },
   robots: {
     index: true,

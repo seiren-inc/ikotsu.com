@@ -9,7 +9,7 @@ import { JsonLd, generateBreadcrumbSchema, generateServiceSchema } from '@/lib/s
 import styles from './carrying.module.css';
 
 export const metadata: Metadata = {
-  title: 'ご遺骨の出張・搬送サービス｜全国対応｜Ikotsu Lab',
+  title: 'ご遺骨の出張・搬送サービス｜全国対応｜Ikotsu.com',
   description: '重くて運びづらいご遺骨を、専任スタッフが直接お迎えにあがり、大切に自社施設まで搬送するサービスです。ご高齢の方や遠方にお住まいの方、お車がない方でも安心してご利用いただけます。全国47都道府県対応、10,000円〜。',
   alternates: { canonical: '/services/carrying' },
 };
@@ -23,7 +23,7 @@ const CARRYING_STEPS = [
 
 const FAQS = [
   { question: '全国どこへでも来てくれますか？', answer: <p>はい、全国47都道府県どちらへでも出張引取りに伺います。ただし、一部の離島や山間部については、交通費の実費やご訪問日時の制約等により、別途ご郵送での「お引取りサービス」をご提案させていただく場合がございます。</p> },
-  { question: '出張費用はどのくらいかかりますか？', answer: <p> Ikotsu Labの施設（東京・埼玉周辺）を起点とする距離に応じて算出します。首都圏エリアであれば10,000円〜、その他の地域については20,000円〜のお見積りとなることが多いです。事前に無料でお見積りを出しますのでご安心ください。</p> },
+  { question: '出張費用はどのくらいかかりますか？', answer: <p> Ikotsu.comの施設（東京・埼玉周辺）を起点とする距離に応じて算出します。首都圏エリアであれば10,000円〜、その他の地域については20,000円〜のお見積りとなることが多いです。事前に無料でお見積りを出しますのでご安心ください。</p> },
   { question: '何体くらいまで対応できますか？', answer: <p>個人のお客様の場合、1体から複数体（ご先祖様のお墓じまい等）まで柔軟に対応可能です。車両に積載できる限り追加の搬送費用はかかりません。寺院や法人様からの数十体規模の搬送につきましても実績がございます。</p> },
   { question: 'そのまま粉骨をお願いできますか？', answer: <p>もちろんです。本サービスは「持ち込みが難しい方」のためのオプションサービスですので、お預かりしたご遺骨をそのまま自社施設にて「粉骨」や「洗骨」処理することが可能です。</p> },
 ];
@@ -117,7 +117,7 @@ export default function CarryingPage() {
           <FadeIn direction="up">
             <h2 className={styles.sectionTitleCenter}>エリア別 お見積り目安</h2>
             <p className={styles.sectionDescCenter}>
-              Ikotsu Labのラボ（関東圏）からの距離に応じて算出します。正確な料金は事前の無料見積りにて一円単位で確定し、当日の追加請求などは一切ございません。
+              Ikotsu.comのラボ（関東圏）からの距離に応じて算出します。正確な料金は事前の無料見積りにて一円単位で確定し、当日の追加請求などは一切ございません。
             </p>
           </FadeIn>
 
@@ -219,7 +219,7 @@ export default function CarryingPage() {
       <JsonLd data={generateServiceSchema({
         name: '出張・搬送（お迎え）サービス',
         description: '重くて運びづらいご遺骨を、専任スタッフが直接ご自宅までお迎えにあがり、大切に自社施設へ搬送するサービスです。全国対応。',
-        url: 'https://ikotsu-lab.example.com/services/carrying',
+        url: 'https://ikotsu.example.com/services/carrying',
       })} />
     </>
   );

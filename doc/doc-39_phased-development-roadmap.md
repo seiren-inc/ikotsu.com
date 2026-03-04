@@ -1,6 +1,6 @@
 # 実装ロードマップ・段階的開発計画
 
-**Project:** Ikotsu Lab Implementation Roadmap & Phased Development Plan
+**Project:** Ikotsu.com Implementation Roadmap & Phased Development Plan
 **Layer:** Execution Planning
 **Version:** 1.0
 **Purpose:** 戦略・設計書群を実装可能な工程へ落とし込み、Antigravityで確実に構築するための実装計画
@@ -102,5 +102,5 @@
 
 ## 12. 最終目標
 
-Ikotsu Labを、粉骨・洗骨分野の標準サイトにする。
+Ikotsu.comを、粉骨・洗骨分野の標準サイトにする。
 戦略から実装まで一貫管理。

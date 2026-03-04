@@ -1,6 +1,6 @@
 # サービスナビゲーション構造設計書
 
-**Project:** Ikotsu Lab Service Navigation Structure
+**Project:** Ikotsu.com Service Navigation Structure
 **Goal:** 情報整理とCV最大化を両立するサービス構造設計
 
 ---

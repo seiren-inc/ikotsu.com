@@ -9,7 +9,7 @@ import { JsonLd, generateBreadcrumbSchema, generateServiceSchema } from '@/lib/s
 import styles from './powdered.module.css';
 
 export const metadata: Metadata = {
-  title: '粉骨サービス｜散骨・手元供養のための遺骨パウダー化｜Ikotsu Lab',
+  title: '粉骨サービス｜散骨・手元供養のための遺骨パウダー化｜Ikotsu.com',
   description: '遺骨を専門の大型設備で粉骨（パウダー化）するサービス。2mm以下の均一な仕上がりで、散骨・改葬・手元供養に最適です。六価クロム還元処理とUV殺菌を全プラン標準実施。全国対応・30,000円〜。',
   alternates: { canonical: '/services/powdered' },
 };
@@ -93,7 +93,7 @@ export default function PowderedPage() {
       <section className="section section--alt" aria-label="粉骨の特徴">
         <div className="container">
           <FadeIn direction="up" className="text-center">
-            <h2 className="section__title">Ikotsu Labの粉骨のこだわり</h2>
+            <h2 className="section__title">Ikotsu.comの粉骨のこだわり</h2>
             <p className="section__description">
               私たちは単に「砕く」だけではありません。環境と人体に配慮した処理を徹底しています。
             </p>
@@ -194,7 +194,7 @@ export default function PowderedPage() {
       <JsonLd data={generateServiceSchema({
         name: '粉骨（パウダー化）サービス',
         description: '遺骨を専用設備でパウダー状に処理。散骨・改葬・手元供養に対応。六価クロム還元処理・UV殺菌標準付帯。',
-        url: 'https://ikotsu-lab.example.com/services/powdered',
+        url: 'https://ikotsu.example.com/services/powdered',
       })} />
     </>
   );

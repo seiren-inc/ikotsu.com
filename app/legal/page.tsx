@@ -4,8 +4,8 @@ import Breadcrumb from '@/components/ui/Breadcrumb';
 import { JsonLd, generateBreadcrumbSchema } from '@/lib/schema/jsonld';
 
 export const metadata: Metadata = {
-  title: 'プライバシーポリシー・特定商取引法 | Ikotsu Lab',
-  description: 'Ikotsu Labのプライバシーポリシーおよび特定商取引法に基づく表記。',
+  title: 'プライバシーポリシー・特定商取引法 | Ikotsu.com',
+  description: 'Ikotsu.comのプライバシーポリシーおよび特定商取引法に基づく表記。',
   alternates: { canonical: '/legal' },
   robots: { index: false, follow: false },
 };
@@ -65,7 +65,7 @@ export default function LegalPage() {
                 },
                 {
                   heading: '個人情報の開示・訂正・削除',
-                  body: 'ご本人から個人情報の開示・訂正・削除のご要望があった場合は、合理的な範囲で速やかに対応します。ご連絡はinfo@ikotsu-lab.comまでお願いします。',
+                  body: 'ご本人から個人情報の開示・訂正・削除のご要望があった場合は、合理的な範囲で速やかに対応します。ご連絡はinfo@ikotsu.comまでお願いします。',
                 },
                 {
                   heading: 'Cookieの使用',
@@ -105,7 +105,7 @@ export default function LegalPage() {
                     { label: '代表責任者', value: '（代表者名）' },
                     { label: '住所', value: '神奈川県横浜市中区（詳細住所）※請求のあった場合に遅滞なく開示' },
                     { label: '電話番号', value: '0120-000-000（平日 9:00〜18:00）' },
-                    { label: 'メール', value: 'info@ikotsu-lab.com' },
+                    { label: 'メール', value: 'info@ikotsu.com' },
                     { label: '販売価格', value: '各サービスの料金ページに記載の通り（税込）' },
                     { label: 'お支払い方法', value: '銀行振込（詳細はお申込み時にご案内します）' },
                     { label: 'サービス提供時期', value: 'お申込み・ご入金確認後、別途ご連絡する日程で実施' },

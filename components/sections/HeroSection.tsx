@@ -61,7 +61,7 @@ export default function HeroSection() {
           <ParallaxSection speed={0.05} className={styles.imageWrapper}>
             <Image
               src="/images/hero-facility.png"
-              alt="Ikotsu Lab 専門施設内観 - 清潔で最新設備を備えた処理環境"
+              alt="Ikotsu.com 専門施設内観 - 清潔で最新設備を備えた処理環境"
               width={640}
               height={640}
               priority

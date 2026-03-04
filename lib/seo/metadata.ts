@@ -8,8 +8,8 @@ interface GenerateMetadataParams {
   noindex?: boolean;
 }
 
-const SITE_NAME = 'Ikotsu Lab｜粉骨・洗骨の専門機関';
-const SITE_URL = 'https://ikotsu-lab.com';
+const SITE_NAME = 'Ikotsu.com｜粉骨・洗骨の専門機関';
+const SITE_URL = 'https://ikotsu.com';
 
 export function generatePageMetadata({
   title,

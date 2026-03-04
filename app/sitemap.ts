@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { GUIDE_ARTICLES } from './guide/page';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://ikotsu-lab.com';
+  const base = 'https://ikotsu.com';
   const now = new Date().toISOString();
 
   const coreRoutes: MetadataRoute.Sitemap = [

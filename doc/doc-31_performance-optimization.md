@@ -1,6 +1,6 @@
 # パフォーマンス最適化・コアウェブバイタル設計書
 
-**Project:** Ikotsu Lab Performance Optimization & Core Web Vitals Design
+**Project:** Ikotsu.com Performance Optimization & Core Web Vitals Design
 **Layer:** Functional Design
 **Version:** 1.0
 **Purpose:** SEO評価・UX・CV率を最大化するためのパフォーマンス最適化設計

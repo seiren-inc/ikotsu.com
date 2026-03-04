@@ -1,6 +1,6 @@
 # マスター要件定義書（統合版）
 
-**Project:** Ikotsu Lab Next-Generation Platform
+**Project:** Ikotsu.com Next-Generation Platform
 **Version:** 1.0
 **Goal:** 粉骨・洗骨業界でSEO/GEO/BtoB/BtoCすべてを制するトップサイト構築
 
@@ -11,7 +11,7 @@
 
 ## 1. プロジェクト目的
 
-遺骨ラボを以下のポジションへ進化させる：
+遺骨.comを以下のポジションへ進化させる：
 
 - 遺骨整備の専門機関
 - 清蓮グループのハブ
@@ -183,6 +183,6 @@ TOP
 
 ## 15. 最終目標
 
-**Ikotsu Labを日本一の遺骨整備専門サイトにする。**
+**Ikotsu.comを日本一の遺骨整備専門サイトにする。**
 
 SEO・GEO・BtoB・UXすべてで業界トップを取る。

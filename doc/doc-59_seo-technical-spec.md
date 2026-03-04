@@ -1,6 +1,6 @@
 # SEO技術実装仕様書
 
-**Project:** Ikotsu Lab SEO Technical Implementation Specification
+**Project:** Ikotsu.com SEO Technical Implementation Specification
 **Layer:** Technical SEO / 検索基盤設計
 **Version:** 1.0
 **Purpose:** 粉骨・洗骨分野で検索上位を"安定的に"維持するための技術SEO実装仕様を確定する
@@ -38,7 +38,7 @@ SEOはコンテンツだけでは勝てない。技術実装が土台。
 
 ## 3. Title / Meta設計
 
-**Title：** 主要KW + 専門性 + 地域または用途（例：粉骨専門業者｜工程公開と料金透明の遺骨ラボ）
+**Title：** 主要KW + 専門性 + 地域または用途（例：粉骨専門業者｜工程公開と料金透明の遺骨.com）
 **Meta Description：** 120〜160文字 / ベネフィット明示 / 煽らない
 各ページ固有に設定。自動生成禁止。
 

@@ -1,6 +1,6 @@
 # ブランドポジショニング・市場差別化設計書
 
-**Project:** Ikotsu Lab Brand Positioning & Market Differentiation Design
+**Project:** Ikotsu.com Brand Positioning & Market Differentiation Design
 **Layer:** Strategy Design
 **Version:** 1.0
 **Purpose:** 価格競争から脱却し、粉骨・洗骨分野で「専門機関ポジション」を確立するためのブランド戦略設計
@@ -11,7 +11,7 @@
 
 遺骨サービス市場の特徴：価格差が大きい / 品質の可視化が難しい / 法律理解が不十分な業者が存在 / 不安商材である
 多くの業者は「安い」「即日」「簡単」を前面に出している。
-**Ikotsu Labはそこに行かない。**
+**Ikotsu.comはそこに行かない。**
 
 ---
 

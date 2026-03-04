@@ -9,7 +9,7 @@ import { JsonLd, generateBreadcrumbSchema, generateServiceSchema } from '@/lib/s
 import styles from './cleaning.module.css';
 
 export const metadata: Metadata = {
-  title: '洗骨（専用洗浄）サービス｜カビや汚れの専門処理｜Ikotsu Lab',
+  title: '洗骨（専用洗浄）サービス｜カビや汚れの専門処理｜Ikotsu.com',
   description: 'カビ・汚れ・変色した遺骨を専用洗浄液で丁寧に洗い流す「洗骨」サービス。長期保管や湿気による劣化に対応し、完全乾燥とUV殺菌で清潔な状態に復元します。全国対応・30,000円〜。粉骨とのセット依頼も可能。',
   alternates: { canonical: '/services/cleaning' },
 };
@@ -120,7 +120,7 @@ export default function CleaningPage() {
               <h3 className={styles.setPlanTitle}>カビのある状態での「粉骨」は危険です</h3>
               <p className={styles.setPlanDesc}>
                 カビが付着したまま粉骨機にかけると、カビの胞子が微細なパウダー全体に混入し大繁殖の恐れがあります（健康被害のリスクも）。
-                Ikotsu Labでは、衛生と安全のため<strong>「洗骨＋粉骨のセットプラン」</strong>を強く推奨しています。
+                Ikotsu.comでは、衛生と安全のため<strong>「洗骨＋粉骨のセットプラン」</strong>を強く推奨しています。
               </p>
             </div>
             <div className={styles.setPlanAction}>
@@ -199,7 +199,7 @@ export default function CleaningPage() {
       <JsonLd data={generateServiceSchema({
         name: '洗骨（専用洗浄）サービス',
         description: 'カビ・汚れ・変色した遺骨を専門洗浄液と超音波で丁寧に洗い流すサービス。長期保管や湿気による劣化に対応し、完全乾燥とUV殺菌で清潔な状態に復元します。',
-        url: 'https://ikotsu-lab.example.com/services/cleaning',
+        url: 'https://ikotsu.example.com/services/cleaning',
       })} />
     </>
   );

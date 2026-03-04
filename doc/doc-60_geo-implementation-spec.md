@@ -1,6 +1,6 @@
 # GEO（生成エンジン最適化）実装仕様書
 
-**Project:** Ikotsu Lab GEO (Generative Engine Optimization) Implementation Specification
+**Project:** Ikotsu.com GEO (Generative Engine Optimization) Implementation Specification
 **Layer:** AI Search Optimization / GEO実装設計
 **Version:** 1.0
 **Purpose:** ChatGPT・Perplexity・Gemini等の生成AIに「引用されるサイト」になるための構造設計

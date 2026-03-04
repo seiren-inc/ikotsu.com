@@ -13,9 +13,9 @@ import RelatedServices from '@/components/sections/RelatedServices';
 import { JsonLd, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema/jsonld';
 
 export const metadata: Metadata = {
-  title: 'Ikotsu Lab｜粉骨・洗骨の専門機関',
+  title: 'Ikotsu.com｜粉骨・洗骨の専門機関',
   description:
-    '粉骨・洗骨の専門機関 Ikotsu Lab（遺骨ラボ）。工程公開・料金透明・全国対応。散骨・改葬・保存のための遺骨前処理を専門機関品質で提供します。',
+    '粉骨・洗骨の専門機関 Ikotsu.com（遺骨.com）。工程公開・料金透明・全国対応。散骨・改葬・保存のための遺骨前処理を専門機関品質で提供します。',
   alternates: {
     canonical: '/',
   },

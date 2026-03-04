@@ -1,6 +1,6 @@
 # AIガバナンス・倫理統制フレームワーク設計書
 
-**Project:** Ikotsu Lab AI Governance & Ethical Control Framework
+**Project:** Ikotsu.com AI Governance & Ethical Control Framework
 **Layer:** AI Risk / Governance Design
 **Version:** 1.0
 **Purpose:** 遺骨という高感度領域でAIを安全・誠実に運用するための統制設計

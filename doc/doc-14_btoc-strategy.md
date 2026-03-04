@@ -1,6 +1,6 @@
 # BtoC戦略設計書
 
-**Project:** Ikotsu Lab BtoC Strategy Design
+**Project:** Ikotsu.com BtoC Strategy Design
 **Layer:** Strategic Design
 **Version:** 1.1
 **Purpose:** 個人顧客から安定的かつ高単価で受注を獲得するための戦略設計（完全版）

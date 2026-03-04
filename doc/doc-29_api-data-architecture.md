@@ -1,6 +1,6 @@
 # API・データアーキテクチャ詳細設計書
 
-**Project:** Ikotsu Lab API & Data Architecture Detailed Design
+**Project:** Ikotsu.com API & Data Architecture Detailed Design
 **Layer:** Functional Design
 **Version:** 1.0
 **Purpose:** シミュレーター・診断・フォーム・将来拡張に対応するためのAPIおよびデータ構造設計
