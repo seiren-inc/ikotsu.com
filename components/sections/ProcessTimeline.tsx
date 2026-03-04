@@ -1,31 +1,26 @@
 'use client';
 
-import ScrollReveal from '@/components/motion/ScrollReveal';
-import styles from './ProcessTimeline.module.css';
+import FadeIn from '@/components/motion/FadeIn';
+import LineDrawTimeline from '@/components/motion/LineDrawTimeline';
 
 const STEPS = [
   {
-    step: '01',
     title: 'お問い合わせ',
     description: 'お電話・フォームからお気軽にご相談いただけます。ご状況をお伺いし、最適なプランをご案内いたします。',
   },
   {
-    step: '02',
     title: 'お預かり・搬送',
     description: '全国対応の出張引取り、またはご郵送にてお送りいただけます。専用梱包キットもご用意可能です。',
   },
   {
-    step: '03',
     title: '状態確認・ご報告',
     description: '到着後、遺骨の状態を確認し写真でご報告。追加処理が必要な場合は事前にお見積りをお出しします。',
   },
   {
-    step: '04',
     title: '専門処理',
     description: '粉骨・洗骨などご依頼に応じた処理を専門設備で実施。工程ごとに記録を残します。',
   },
   {
-    step: '05',
     title: 'ご返送・お引渡し',
     description: '処理完了後、専用容器に収めて丁寧にご返送。処理前後の状態を記録したレポートもお送りします。',
   },
@@ -33,9 +28,9 @@ const STEPS = [
 
 export default function ProcessTimeline() {
   return (
-    <section className={`section section--alt`} aria-label="ご利用の流れ">
+    <section className="section section--alt" aria-label="ご利用の流れ">
       <div className="container container--narrow">
-        <ScrollReveal>
+        <FadeIn>
           <div className="section__header">
             <span className="section__label">Process</span>
             <h2 className="section__title">ご利用の流れ</h2>
@@ -43,23 +38,9 @@ export default function ProcessTimeline() {
               お問い合わせからお引渡しまで、全工程を透明にご案内いたします。
             </p>
           </div>
-        </ScrollReveal>
-        <div className={styles.timeline}>
-          <div className={styles.line} aria-hidden="true" />
-          {STEPS.map((item, index) => (
-            <ScrollReveal key={item.step} delay={index * 120}>
-              <div className={styles.item}>
-                <div className={styles.marker}>
-                  <span className={styles.stepNumber}>{item.step}</span>
-                </div>
-                <div className={styles.content}>
-                  <h3 className={styles.title}>{item.title}</h3>
-                  <p className={styles.description}>{item.description}</p>
-                </div>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
+        </FadeIn>
+        
+        <LineDrawTimeline steps={[...STEPS]} />
       </div>
     </section>
   );

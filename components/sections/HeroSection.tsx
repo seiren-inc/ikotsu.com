@@ -2,7 +2,8 @@
 
 import Image from 'next/image';
 import Button from '@/components/ui/Button';
-import ScrollReveal from '@/components/motion/ScrollReveal';
+import FadeIn from '@/components/motion/FadeIn';
+import ParallaxSection from '@/components/motion/ParallaxSection';
 import styles from './HeroSection.module.css';
 
 export default function HeroSection() {
@@ -11,23 +12,23 @@ export default function HeroSection() {
       <div className={`container ${styles.heroInner}`}>
         {/* Text Side */}
         <div className={styles.textSide}>
-          <ScrollReveal>
+          <FadeIn direction="up" delay={0}>
             <span className={styles.label}>粉骨・洗骨の専門機関</span>
-          </ScrollReveal>
-          <ScrollReveal delay={80}>
+          </FadeIn>
+          <FadeIn direction="up" delay={0.08}>
             <h1 className={styles.title}>
               遺骨を、<br />
               <span className={styles.titleAccent}>専門機関品質</span>で。
             </h1>
-          </ScrollReveal>
-          <ScrollReveal delay={160}>
+          </FadeIn>
+          <FadeIn direction="up" delay={0.16}>
             <p className={styles.description}>
-              工程公開・料金透明・全国対応。
-              散骨・改葬・保存のための遺骨前処理を、
+              工程公開・料金透明・全国対応。<br />
+              散骨・改葬・保存のための遺骨前処理を、<br />
               安心と信頼の専門機関がお受けします。
             </p>
-          </ScrollReveal>
-          <ScrollReveal delay={240}>
+          </FadeIn>
+          <FadeIn direction="up" delay={0.24}>
             <div className={styles.actions}>
               <Button href="/contact" variant="primary" size="lg">
                 無料相談する
@@ -36,8 +37,8 @@ export default function HeroSection() {
                 料金目安を見る
               </Button>
             </div>
-          </ScrollReveal>
-          <ScrollReveal delay={320}>
+          </FadeIn>
+          <FadeIn direction="up" delay={0.32}>
             <div className={styles.badges}>
               <div className={styles.badge}>
                 <span className={styles.badgeIcon}>✓</span>
@@ -52,12 +53,12 @@ export default function HeroSection() {
                 <span className={styles.badgeText}>全国対応</span>
               </div>
             </div>
-          </ScrollReveal>
+          </FadeIn>
         </div>
 
         {/* Image Side */}
         <div className={styles.imageSide}>
-          <div className={styles.imageWrapper}>
+          <ParallaxSection speed={0.05} className={styles.imageWrapper}>
             <Image
               src="/images/hero-facility.png"
               alt="Ikotsu Lab 専門施設内観 - 清潔で最新設備を備えた処理環境"
@@ -67,7 +68,7 @@ export default function HeroSection() {
               className={styles.heroImage}
             />
             <div className={styles.imageOverlay} />
-          </div>
+          </ParallaxSection>
         </div>
       </div>
 

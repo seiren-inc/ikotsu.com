@@ -1,4 +1,4 @@
-import ScrollReveal from '@/components/motion/ScrollReveal';
+import FadeIn from '@/components/motion/FadeIn';
 import Accordion from '@/components/ui/Accordion';
 import styles from './FAQPreview.module.css';
 
@@ -49,7 +49,7 @@ export default function FAQPreview() {
   return (
     <section className="section" aria-label="よくあるご質問">
       <div className="container container--narrow">
-        <ScrollReveal>
+        <FadeIn direction="up">
           <div className="section__header">
             <span className="section__label">FAQ</span>
             <h2 className="section__title">よくあるご質問</h2>
@@ -57,13 +57,13 @@ export default function FAQPreview() {
               お客様からよくいただくご質問をまとめました。
             </p>
           </div>
-        </ScrollReveal>
-        <ScrollReveal delay={100}>
+        </FadeIn>
+        <FadeIn direction="up" delay={0.1}>
           <Accordion items={FAQ_ITEMS.map(item => ({
             question: item.question,
             answer: <p>{item.answer}</p>,
           }))} />
-        </ScrollReveal>
+        </FadeIn>
       </div>
     </section>
   );

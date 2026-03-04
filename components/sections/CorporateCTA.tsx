@@ -1,4 +1,4 @@
-import ScrollReveal from '@/components/motion/ScrollReveal';
+import FadeIn from '@/components/motion/FadeIn';
 import Button from '@/components/ui/Button';
 import styles from './CorporateCTA.module.css';
 
@@ -14,7 +14,7 @@ export default function CorporateCTA() {
     <section className={`section ${styles.section}`} aria-label="法人向けサービス">
       <div className="container">
         <div className={styles.grid}>
-          <ScrollReveal direction="left">
+          <FadeIn direction="left">
             <div className={styles.textSide}>
               <span className="section__label">For Corporate</span>
               <h2 className={styles.title}>
@@ -48,8 +48,8 @@ export default function CorporateCTA() {
                 </Button>
               </div>
             </div>
-          </ScrollReveal>
-          <ScrollReveal direction="right">
+          </FadeIn>
+          <FadeIn direction="right">
             <div className={styles.statsSide}>
               <div className={styles.statCard}>
                 <span className={styles.statValue}>200+</span>
@@ -64,7 +64,7 @@ export default function CorporateCTA() {
                 <span className={styles.statLabel}>最短納期</span>
               </div>
             </div>
-          </ScrollReveal>
+          </FadeIn>
         </div>
       </div>
     </section>

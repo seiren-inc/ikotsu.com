@@ -1,0 +1,120 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardHeader {
+  padding: var(--space-6);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.planTitle {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.priceWrap {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  color: var(--accent-primary);
+  margin-bottom: var(--space-2);
+}
+
+.priceUnit {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  font-weight: var(--font-medium);
+}
+
+.priceValue {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  line-height: 1;
+}
+
+.priceCurrency {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+}
+
+.priceTax {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  margin-left: 2px;
+}
+
+.planDesc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-top: var(--space-3);
+}
+
+.cardBody {
+  padding: var(--space-6);
+  flex: 1;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+}
+
+.checkIcon {
+  width: 16px;
+  height: 16px;
+  color: var(--state-success);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.actions {
+  text-align: center;
+}
+
+.linkButton {
+  display: inline-flex;
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--accent-primary);
+  text-decoration: none;
+}
+
+.linkButton:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

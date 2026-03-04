@@ -1,4 +1,5 @@
-import ScrollReveal from '@/components/motion/ScrollReveal';
+import FadeIn from '@/components/motion/FadeIn';
+import StaggerChildren, { StaggerItem } from '@/components/motion/StaggerChildren';
 import Link from 'next/link';
 import styles from './GuideHub.module.css';
 
@@ -22,7 +23,7 @@ export default function GuideHub() {
   return (
     <section className="section section--alt" aria-label="ガイド記事">
       <div className="container">
-        <ScrollReveal>
+        <FadeIn direction="up">
           <div className="section__header">
             <span className="section__label">Guide</span>
             <h2 className="section__title">知っておきたい基礎知識</h2>
@@ -30,10 +31,10 @@ export default function GuideHub() {
               粉骨・洗骨・散骨に関する正しい知識を、専門機関の視点でわかりやすく解説します。
             </p>
           </div>
-        </ScrollReveal>
-        <div className={styles.grid}>
-          {GUIDE_ARTICLES.map((article, index) => (
-            <ScrollReveal key={article.slug} delay={index * 80}>
+        </FadeIn>
+        <StaggerChildren className={styles.grid} staggerDelay={0.05}>
+          {GUIDE_ARTICLES.map((article) => (
+            <StaggerItem key={article.slug}>
               <Link href={`/guide/${article.slug}`} className={styles.card}>
                 <span className={styles.category}>
                   {CATEGORY_LABELS[article.category]}
@@ -43,16 +44,16 @@ export default function GuideHub() {
                   記事を読む →
                 </span>
               </Link>
-            </ScrollReveal>
+            </StaggerItem>
           ))}
-        </div>
-        <ScrollReveal>
+        </StaggerChildren>
+        <FadeIn direction="up" delay={0.2}>
           <div className={styles.moreLink}>
             <Link href="/guide" className={styles.viewAll}>
               ガイド一覧を見る →
             </Link>
           </div>
-        </ScrollReveal>
+        </FadeIn>
       </div>
     </section>
   );

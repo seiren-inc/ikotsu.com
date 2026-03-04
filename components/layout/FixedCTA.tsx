@@ -1,6 +1,8 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { trackCtaClick } from '@/lib/analytics/gtag';
 import styles from './FixedCTA.module.css';
 
 const CTA_ITEMS = [
@@ -17,7 +19,7 @@ const CTA_ITEMS = [
   {
     id: 'diagnosis',
     label: 'AI診断',
-    href: '#diagnosis',
+    href: '/diagnosis',
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <path d="M10 3V17M3 10H17M6 6L14 14M14 6L6 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
@@ -36,7 +38,14 @@ const CTA_ITEMS = [
   },
 ] as const;
 
+// FixedCTAを非表示にするページ（診断ページ内にCTAが内包されているため）
+const HIDDEN_PATHS = ['/diagnosis'];
+
 export default function FixedCTA() {
+  const pathname = usePathname();
+
+  if (HIDDEN_PATHS.includes(pathname)) return null;
+
   return (
     <div className={styles.fixedCta} role="complementary" aria-label="お問い合わせボタン">
       {CTA_ITEMS.map((item) => (
@@ -45,6 +54,9 @@ export default function FixedCTA() {
           href={item.href}
           className={`${styles.ctaButton} ${styles[`ctaButton--${item.id}`]}`}
           data-cta-type={item.id}
+          onClick={() => {
+            trackCtaClick(item.id, pathname);
+          }}
         >
           <span className={styles.ctaIcon}>{item.icon}</span>
           <span className={styles.ctaLabel}>{item.label}</span>
@@ -53,3 +65,4 @@ export default function FixedCTA() {
     </div>
   );
 }
+

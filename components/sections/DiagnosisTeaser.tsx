@@ -1,4 +1,4 @@
-import ScrollReveal from '@/components/motion/ScrollReveal';
+import FadeIn from '@/components/motion/FadeIn';
 import Button from '@/components/ui/Button';
 import styles from './DiagnosisTeaser.module.css';
 
@@ -6,7 +6,7 @@ export default function DiagnosisTeaser() {
   return (
     <section className={styles.section} aria-label="AI診断">
       <div className="container container--narrow">
-        <ScrollReveal>
+        <FadeIn direction="up">
           <div className={styles.card}>
             <div className={styles.content}>
               <span className={styles.badge}>AI診断</span>
@@ -39,12 +39,12 @@ export default function DiagnosisTeaser() {
                   <span>結果表示</span>
                 </div>
               </div>
-              <Button href="#diagnosis" variant="primary" size="lg">
+              <Button href="/diagnosis" variant="primary" size="lg">
                 無料で診断する
               </Button>
             </div>
           </div>
-        </ScrollReveal>
+        </FadeIn>
       </div>
     </section>
   );

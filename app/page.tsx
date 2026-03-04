@@ -3,10 +3,13 @@ import HeroSection from '@/components/sections/HeroSection';
 import TrustStrip from '@/components/sections/TrustStrip';
 import ServiceCards from '@/components/sections/ServiceCards';
 import ProcessTimeline from '@/components/sections/ProcessTimeline';
+import PricePreview from '@/components/sections/PricePreview';
 import DiagnosisTeaser from '@/components/sections/DiagnosisTeaser';
-import CorporateCTA from '@/components/sections/CorporateCTA';
+import CaseAuthority from '@/components/sections/CaseAuthority';
 import GuideHub from '@/components/sections/GuideHub';
+import CorporateCTA from '@/components/sections/CorporateCTA';
 import FAQPreview from '@/components/sections/FAQPreview';
+import RelatedServices from '@/components/sections/RelatedServices';
 import { JsonLd, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema/jsonld';
 
 export const metadata: Metadata = {
@@ -38,10 +41,13 @@ export default function Home() {
       <TrustStrip />
       <ServiceCards />
       <ProcessTimeline />
+      <PricePreview />
       <DiagnosisTeaser />
-      <CorporateCTA />
+      <CaseAuthority />
       <GuideHub />
+      <CorporateCTA />
       <FAQPreview />
+      <RelatedServices />
 
       {/* Structured Data */}
       <JsonLd data={generateBreadcrumbSchema([{ name: 'トップ', href: '/' }])} />

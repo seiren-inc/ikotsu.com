@@ -1,0 +1,317 @@
+/* ========================================
+   For Corporate Page
+   ======================================== */
+
+.hero {
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--accent-secondary) 100%);
+  padding: var(--space-20) 0 var(--space-16);
+  color: var(--text-inverse);
+  text-align: center;
+}
+
+.heroBadge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  color: var(--text-inverse);
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.heroTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  color: var(--text-inverse);
+  margin-bottom: var(--space-6);
+  line-height: var(--leading-tight);
+}
+
+.heroLead {
+  font-size: var(--text-lg);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: var(--leading-relaxed);
+  max-width: 720px;
+  margin: 0 auto var(--space-8);
+}
+
+.heroActions {
+  display: flex;
+  justify-content: center;
+}
+
+/* ── Corporate Types ── */
+.corpTypeGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.corpTypeCard {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-top: 4px solid var(--accent-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.corpTypeCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.corpTypeLabel {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: 2px solid var(--bg-secondary);
+}
+
+.corpTypeDesc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+/* ── Challenges & Solutions ── */
+.solutionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: stretch;
+}
+
+.solutionCard {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.solutionCardAlt {
+  background: var(--bg-primary);
+  border: 2px solid var(--accent-primary);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.solutionHeaderBad {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-weight: var(--font-bold);
+  text-align: center;
+  padding: var(--space-4);
+  font-size: var(--text-lg);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.solutionHeaderGood {
+  background: var(--accent-primary);
+  color: var(--text-inverse);
+  font-weight: var(--font-bold);
+  text-align: center;
+  padding: var(--space-4);
+  font-size: var(--text-lg);
+}
+
+.solutionList, .solutionListAlt {
+  padding: var(--space-8);
+  list-style: none;
+}
+
+.solutionList li {
+  position: relative;
+  padding-left: var(--space-6);
+  margin-bottom: var(--space-4);
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+.solutionList li::before {
+  content: '△';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+  font-weight: var(--font-bold);
+}
+
+.solutionListAlt li {
+  position: relative;
+  padding-left: var(--space-6);
+  margin-bottom: var(--space-4);
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  line-height: var(--leading-relaxed);
+  font-weight: var(--font-medium);
+}
+
+.solutionListAlt li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  font-weight: var(--font-bold);
+}
+
+.highlight {
+  color: var(--accent-primary);
+  font-weight: var(--font-bold);
+}
+
+/* ── Merits ── */
+.meritGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.meritCard {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  transition: box-shadow var(--duration-normal) var(--ease-out),
+              transform var(--duration-normal) var(--ease-out);
+}
+
+.meritCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.meritIcon {
+  display: block;
+  font-size: 40px;
+  margin-bottom: var(--space-4);
+}
+
+.meritTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.meritDesc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+/* ── Flow ── */
+.flowGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.flowStep {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  text-align: center;
+  border: 1px solid var(--border-light);
+  position: relative;
+}
+
+.flowNum {
+  width: 48px;
+  height: 48px;
+  background: var(--bg-secondary);
+  color: var(--accent-primary);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: var(--font-bold);
+  font-size: var(--text-lg);
+  margin: 0 auto var(--space-4);
+  border: 2px solid var(--bg-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.flowTitle {
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.flowDesc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+/* ── Utils ── */
+.sectionHeaderMargin10 {
+  margin-bottom: var(--space-10);
+}
+
+.sectionHeaderMargin12 {
+  margin-bottom: var(--space-12);
+}
+
+/* ── Form Wrapper ── */
+.formWrapper {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-10);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .corpTypeGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .meritGrid, .solutionGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .flowGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: var(--text-3xl);
+  }
+
+  .corpTypeGrid, .solutionGrid, .meritGrid, .flowGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formWrapper {
+    padding: var(--space-6);
+    border-radius: var(--radius-xl);
+  }
+  
+  .flowStep {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .flowNum {
+    margin: 0 0 var(--space-3) 0;
+  }
+}

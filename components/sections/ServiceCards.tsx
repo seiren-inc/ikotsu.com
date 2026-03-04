@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import ScrollReveal from '@/components/motion/ScrollReveal';
+import FadeIn from '@/components/motion/FadeIn';
+import StaggerChildren, { StaggerItem } from '@/components/motion/StaggerChildren';
+import BlurReveal from '@/components/motion/BlurReveal';
 import styles from './ServiceCards.module.css';
 
 const SERVICES = [
@@ -38,7 +40,7 @@ export default function ServiceCards() {
   return (
     <section className="section" aria-label="サービス一覧">
       <div className="container">
-        <ScrollReveal>
+        <FadeIn>
           <div className="section__header">
             <span className="section__label">Services</span>
             <h2 className="section__title">専門サービス</h2>
@@ -46,23 +48,25 @@ export default function ServiceCards() {
               遺骨の状態・ご希望に応じた最適な処理を、専門機関品質でご提供します。
             </p>
           </div>
-        </ScrollReveal>
-        <div className={styles.grid}>
-          {SERVICES.map((service, index) => (
-            <ScrollReveal key={service.slug} delay={index * 100}>
+        </FadeIn>
+        <StaggerChildren className={styles.grid} staggerDelay={0.1}>
+          {SERVICES.map((service) => (
+            <StaggerItem key={service.slug}>
               <Link
                 href={`/services/${service.slug}`}
                 className={styles.card}
                 aria-label={`${service.title}の詳細を見る`}
               >
                 <div className={styles.imageWrapper}>
-                  <Image
-                    src={service.image}
-                    alt={`${service.title}の処理工程`}
-                    width={400}
-                    height={280}
-                    className={styles.image}
-                  />
+                  <BlurReveal>
+                    <Image
+                      src={service.image}
+                      alt={`${service.title}の処理工程`}
+                      width={400}
+                      height={280}
+                      className={styles.image}
+                    />
+                  </BlurReveal>
                 </div>
                 <div className={styles.body}>
                   <h3 className={styles.title}>{service.title}</h3>
@@ -76,9 +80,9 @@ export default function ServiceCards() {
                   </span>
                 </div>
               </Link>
-            </ScrollReveal>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerChildren>
       </div>
     </section>
   );

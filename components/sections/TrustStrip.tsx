@@ -1,7 +1,7 @@
 'use client';
 
 import CountUp from '@/components/motion/CountUp';
-import ScrollReveal from '@/components/motion/ScrollReveal';
+import FadeIn from '@/components/motion/FadeIn';
 import styles from './TrustStrip.module.css';
 
 const TRUST_ITEMS = [
@@ -53,7 +53,7 @@ export default function TrustStrip() {
   return (
     <section className={styles.trustStrip} aria-label="実績・信頼指標">
       <div className="container">
-        <ScrollReveal>
+        <FadeIn direction="up">
           <div className={styles.grid}>
             {TRUST_ITEMS.map((item, index) => (
               <div key={index} className={styles.item}>
@@ -67,7 +67,7 @@ export default function TrustStrip() {
               </div>
             ))}
           </div>
-        </ScrollReveal>
+        </FadeIn>
       </div>
     </section>
   );
