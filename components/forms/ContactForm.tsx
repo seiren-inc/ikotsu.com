@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { supabase } from '@/lib/supabase';
 import { trackFormSubmit } from '@/lib/analytics/gtag';
 import styles from './ContactForm.module.css';
 
@@ -64,15 +63,19 @@ export default function ContactForm({ defaultService }: { defaultService?: Servi
 
     setStatus('loading');
 
-    const { error } = await supabase.from('inquiries_b2c').insert({
-      name: form.name.trim(),
-      email: form.email.trim(),
-      phone: form.phone.trim() || null,
-      inquiry_type: form.inquiry_type || null,
-      message: form.message.trim(),
+    const res = await fetch('/api/inquiries/b2c', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: form.name.trim(),
+        email: form.email.trim(),
+        phone: form.phone.trim() || null,
+        inquiry_type: form.inquiry_type || null,
+        message: form.message.trim(),
+      }),
     });
 
-    if (error) {
+    if (!res.ok) {
       setStatus('error');
       return;
     }

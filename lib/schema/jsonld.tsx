@@ -151,6 +151,29 @@ export function generateArticleSchema(params: {
   };
 }
 
+/* ── HowTo ── */
+export function generateHowToSchema(params: {
+  name: string;
+  description: string;
+  totalTime?: string; // ISO 8601 duration e.g. "P7D"
+  steps: { name: string; text: string; image?: string }[];
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: params.name,
+    description: params.description,
+    ...(params.totalTime ? { totalTime: params.totalTime } : {}),
+    step: params.steps.map((s, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+      ...(s.image ? { image: s.image } : {}),
+    })),
+  };
+}
+
 /* ── JSON-LD Script ── */
 export function JsonLd({ data }: { data: Record<string, unknown> }) {
   return (

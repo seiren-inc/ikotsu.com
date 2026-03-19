@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { supabase } from '@/lib/supabase';
 import { trackFormSubmit } from '@/lib/analytics/gtag';
 import styles from './CorporateForm.module.css';
 
@@ -81,26 +80,31 @@ export default function CorporateForm() {
 
     setStatus('loading');
 
-    // 資料請求の場合は先頭に識別用テキストを付ける
-    const prefix = form.inquiry_type === 'document' ? '【資料請求】\n' : '';
-    const finalMessage = prefix + form.message.trim();
-
-    const { error } = await supabase.from('inquiries_b2b').insert({
+    // 送信ペイロード
+    const payload = {
+      inquiry_type: form.inquiry_type,
       corporate_name: form.corporate_name.trim(),
       contact_person: form.contact_person.trim(),
       position: form.position.trim() || null,
       phone: form.phone.trim() || null,
       email: form.email.trim(),
-      monthly_volume: form.monthly_volume ? parseInt(form.monthly_volume, 10) : null,
+      monthly_volume: form.monthly_volume || null,
       corporate_type: form.corporate_type || null,
       requested_model: form.requested_model || null,
-      message: finalMessage,
+      message: form.message.trim() || null,
+    };
+
+    const res = await fetch('/api/inquiries/b2b', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
     });
 
-    if (error) {
+    if (!res.ok) {
       setStatus('error');
       return;
     }
+    
     trackFormSubmit(form.inquiry_type === 'document' ? 'document_request_b2b' : 'contact_b2b');
     setStatus('success');
   }

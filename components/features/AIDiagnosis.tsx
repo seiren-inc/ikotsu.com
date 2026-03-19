@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { supabase } from '@/lib/supabase';
 import { trackDiagnosisComplete } from '@/lib/analytics/gtag';
 import styles from './AIDiagnosis.module.css';
 
@@ -158,14 +157,18 @@ export default function AIDiagnosis() {
       // ログ保存（失敗しても無視）
       if (!logSaved) {
         setLogSaved(true);
-        await supabase.from('diagnosis_logs').insert({
-          session_id: crypto.randomUUID(),
-          bone_condition: newAnswers.bone_condition,
-          future_plan: newAnswers.future_plan,
-          storage_period: newAnswers.storage_period,
-          anxiety_type: newAnswers.anxiety_type,
-          recommended_service: rec.service,
-        }).then(() => {});
+        await fetch('/api/logs/diagnosis', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            session_id: crypto.randomUUID(),
+            bone_condition: newAnswers.bone_condition,
+            future_plan: newAnswers.future_plan,
+            storage_period: newAnswers.storage_period,
+            anxiety_type: newAnswers.anxiety_type,
+            recommended_service: rec.service,
+          }),
+        }).catch((err) => console.error('Diagnosis log fetch error:', err));
         trackDiagnosisComplete(rec.service);
       }
     }

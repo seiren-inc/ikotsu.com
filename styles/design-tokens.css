@@ -1,39 +1,37 @@
 /* ================================================
-   Ikotsu Lab Design System Tokens
-   Version: 1.0
-   Based on: 56 Design Specification Documents
+   Ikotsu.com Design System Tokens  v2.0
    ================================================ */
 
 :root {
   /* ── Color: Background ── */
-  --bg-primary: #fafbfc;
-  --bg-secondary: #f3f5f7;
-  --bg-elevated: #ffffff;
-  --bg-dark: #1a2332;
-  --bg-overlay: rgba(26, 35, 50, 0.6);
+  --bg-primary: #FAFAF8;           /* ウォームオフホワイト */
+  --bg-secondary: #F2F1EE;         /* ウォームグレー */
+  --bg-elevated: #FFFFFF;
+  --bg-dark: #0E1E35;              /* 深いネイビー（フッター・ダークセクション） */
+  --bg-overlay: rgba(10, 22, 40, 0.65);
 
   /* ── Color: Text ── */
-  --text-primary: #1a2332;
-  --text-secondary: #4a5568;
-  --text-muted: #8b95a5;
-  --text-inverse: #ffffff;
-  --text-link: #2e5c8a;
+  --text-primary: #0E1E35;
+  --text-secondary: #3D4F63;
+  --text-muted: #7A8EA3;
+  --text-inverse: #FFFFFF;
+  --text-link: #1A3A5C;
 
   /* ── Color: Accent ── */
-  --accent-primary: #2e5c8a; /* ブルーグレー */
-  --accent-primary-hover: #3a6f9e;
-  --accent-primary-light: #e8f0f8;
-  --accent-secondary: #1b3a5c; /* ネイビー */
-  --accent-secondary-hover: #254d73;
-  --accent-gold: #c4a35a; /* 淡いゴールド（最小限使用） */
-  --accent-gold-light: rgba(196, 163, 90, 0.12);
-  --accent-glow: rgba(46, 92, 138, 0.15);
+  --accent-primary: #1A3A5C;        /* 深いネイビー */
+  --accent-primary-hover: #24507A;
+  --accent-primary-light: #E6EFF8;
+  --accent-secondary: #0D2238;      /* より深いネイビー */
+  --accent-secondary-hover: #152E50;
+  --accent-gold: #B8963E;           /* 深みゴールド */
+  --accent-gold-light: rgba(184, 150, 62, 0.1);
+  --accent-glow: rgba(26, 58, 92, 0.15);
 
   /* ── Color: Border ── */
-  --border-light: #e8ecf0;
-  --border-default: #d1d9e0;
-  --border-strong: #a0aebf;
-  --border-focus: #2e5c8a;
+  --border-light: #E8E6E0;
+  --border-default: #CCC8BF;
+  --border-strong: #9CA8B8;
+  --border-focus: #1A3A5C;
 
   /* ── Color: State ── */
   --state-success: #2d8a4e;
@@ -44,19 +42,19 @@
   --state-danger-bg: #fdecec;
 
   /* ── Typography: Font Family ── */
-  --font-heading: "Inter", "Noto Sans JP", sans-serif;
+  --font-heading: "Outfit", "Inter", "Noto Sans JP", sans-serif;
   --font-body: "Noto Sans JP", "Inter", sans-serif;
 
   /* ── Typography: Font Size ── */
-  --text-xs: 0.75rem; /* 12px */
-  --text-sm: 0.875rem; /* 14px */
-  --text-base: 1rem; /* 16px */
-  --text-lg: 1.125rem; /* 18px */
-  --text-xl: 1.25rem; /* 20px */
-  --text-2xl: 1.5rem; /* 24px */
+  --text-xs: 0.75rem;   /* 12px */
+  --text-sm: 0.875rem;  /* 14px */
+  --text-base: 1rem;    /* 16px */
+  --text-lg: 1.125rem;  /* 18px */
+  --text-xl: 1.25rem;   /* 20px */
+  --text-2xl: 1.5rem;   /* 24px */
   --text-3xl: 1.875rem; /* 30px */
-  --text-4xl: 2.25rem; /* 36px */
-  --text-5xl: 3rem; /* 48px */
+  --text-4xl: 2.25rem;  /* 36px */
+  --text-5xl: 3rem;     /* 48px */
 
   /* ── Typography: Font Weight ── */
   --font-normal: 400;
@@ -66,40 +64,41 @@
 
   /* ── Typography: Line Height ── */
   --leading-tight: 1.3;
-  --leading-normal: 1.7;
+  --leading-normal: 1.75;
   --leading-relaxed: 1.9;
 
   /* ── Typography: Letter Spacing ── */
   --tracking-tight: -0.01em;
   --tracking-normal: 0.02em;
-  --tracking-wide: 0.05em;
+  --tracking-wide: 0.06em;
 
   /* ── Spacing ── */
-  --space-1: 0.25rem; /* 4px */
-  --space-2: 0.5rem; /* 8px */
-  --space-3: 0.75rem; /* 12px */
-  --space-4: 1rem; /* 16px */
-  --space-6: 1.5rem; /* 24px */
-  --space-8: 2rem; /* 32px */
-  --space-10: 2.5rem; /* 40px */
-  --space-12: 3rem; /* 48px */
-  --space-16: 4rem; /* 64px */
-  --space-20: 5rem; /* 80px */
-  --space-24: 6rem; /* 96px */
-  --space-32: 8rem; /* 128px */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-10: 2.5rem;  /* 40px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+  --space-20: 5rem;    /* 80px */
+  --space-24: 6rem;    /* 96px */
+  --space-32: 8rem;    /* 128px */
 
-  /* ── Border Radius ── */
+  /* ── Border Radius（現代化） ── */
   --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
+  --radius-md: 10px;   /* 8px → 10px */
+  --radius-lg: 16px;   /* 12px → 16px */
+  --radius-xl: 20px;   /* 16px → 20px */
   --radius-full: 9999px;
 
-  /* ── Shadow ── */
-  --shadow-sm: 0 1px 3px rgba(26, 35, 50, 0.06);
-  --shadow-md: 0 4px 12px rgba(26, 35, 50, 0.08);
-  --shadow-lg: 0 8px 24px rgba(26, 35, 50, 0.12);
-  --shadow-hover: 0 12px 32px rgba(26, 35, 50, 0.16);
+  /* ── Shadow（質感強化） ── */
+  --shadow-sm:    0 1px 3px rgba(10, 22, 40, 0.06), 0 1px 2px rgba(10, 22, 40, 0.04);
+  --shadow-md:    0 4px 16px rgba(10, 22, 40, 0.10), 0 2px 6px rgba(10, 22, 40, 0.06);
+  --shadow-lg:    0 12px 32px rgba(10, 22, 40, 0.14), 0 4px 12px rgba(10, 22, 40, 0.08);
+  --shadow-hover: 0 20px 48px rgba(10, 22, 40, 0.18), 0 6px 16px rgba(10, 22, 40, 0.10);
 
   /* ── Motion: Duration ── */
   --duration-fast: 150ms;
@@ -130,6 +129,25 @@
   --z-modal-backdrop: 400;
   --z-modal: 500;
   --z-toast: 600;
+
+  /* ── Legacy Tokens (エイリアス: 古いCSS互換用) ── */
+  --color-primary: var(--accent-primary);
+  --color-secondary: var(--accent-secondary);
+  --color-surface: var(--bg-elevated);
+  --color-bg: var(--bg-primary);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border: var(--border-default);
+  
+  --font-size-xs: var(--text-xs);
+  --font-size-sm: var(--text-sm);
+  --font-size-base: var(--text-base);
+  
+  --transition-base: var(--duration-normal) var(--ease-out);
+  
+  --shadow-xl: 0 20px 25px -5px rgba(10, 22, 40, 0.1), 0 10px 10px -5px rgba(10, 22, 40, 0.04);
+  --radius-2xl: 24px;
+  --leading-snug: 1.375;
 }
 
 /* ── Reduced Motion ── */

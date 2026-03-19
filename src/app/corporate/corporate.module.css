@@ -1,0 +1,305 @@
+/* /corporate/ 法人窓口ページ CSS */
+
+/* Hero */
+.hero {
+  padding: var(--space-20) 0 var(--space-16);
+  background: linear-gradient(135deg, #0f2a1e 0%, #1a4a35 60%, #2d6b52 100%);
+  color: var(--text-inverse, #fff);
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #c8f0e0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: var(--space-5);
+}
+
+.heroTitle {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.25;
+  margin-bottom: var(--space-5);
+  letter-spacing: -0.01em;
+}
+
+.heroLead {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.8;
+  margin-bottom: var(--space-6);
+}
+
+/* Service Grid */
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-5);
+  margin-top: var(--space-8);
+}
+
+.serviceCard {
+  background: var(--bg-primary, #fff);
+  border: 1px solid var(--color-border, #e5e2dc);
+  border-radius: 10px;
+  padding: var(--space-6);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.serviceCard:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.serviceTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-secondary, #2d4a7a);
+  margin-bottom: var(--space-3);
+}
+
+.serviceDesc {
+  font-size: 0.875rem;
+  color: var(--text-secondary, #5a5855);
+  line-height: 1.7;
+  margin-bottom: var(--space-4);
+}
+
+.serviceLink {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary, #1a6b5a);
+  text-decoration: none;
+}
+
+.serviceLink:hover {
+  text-decoration: underline;
+}
+
+/* Issue Grid */
+.issueGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.issueCard,
+.issueCardAlt {
+  padding: var(--space-7);
+  border-radius: 10px;
+}
+
+.issueCard {
+  background: #fff8f5;
+  border: 1px solid #f0d0c0;
+}
+
+.issueCardAlt {
+  background: #f0faf5;
+  border: 1px solid #b0e0cc;
+}
+
+.issueTitle {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #c04020;
+  margin-bottom: var(--space-4);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.issueTitleAlt {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #1a6b5a;
+  margin-bottom: var(--space-4);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.issueList,
+.issueListAlt {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.issueList > li {
+  font-size: 0.9rem;
+  color: #5a3020;
+  line-height: 1.6;
+  padding-left: var(--space-5);
+  position: relative;
+}
+
+.issueList > li::before {
+  content: '✕';
+  position: absolute;
+  left: 0;
+  color: #c04020;
+  font-weight: 700;
+}
+
+.issueListAlt > li {
+  font-size: 0.9rem;
+  color: #1a3020;
+  line-height: 1.6;
+  padding-left: var(--space-5);
+  position: relative;
+}
+
+.issueListAlt > li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #1a6b5a;
+  font-weight: 700;
+}
+
+/* Flow Grid (委託フロー用) */
+.flowGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin-top: var(--space-8);
+}
+
+.flowCard {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: var(--space-6);
+  background: var(--bg-primary, #fff);
+  border: 1px solid var(--color-border, #e5e2dc);
+  border-radius: 10px;
+  padding: var(--space-6);
+  align-items: start;
+}
+
+.flowNum {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-secondary, #2d4a7a);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.flowContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.flowTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary, #1a1917);
+}
+
+.flowSla {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-secondary, #2d4a7a);
+  background: rgba(45, 74, 122, 0.08);
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.flowDesc {
+  font-size: 0.9rem;
+  color: var(--text-secondary, #5a5855);
+  line-height: 1.7;
+  margin-top: var(--space-1);
+}
+
+.flowDocs {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.flowDocs > li {
+  font-size: 0.8rem;
+  background: #f0faf5;
+  border: 1px solid #b0e0cc;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #1a4a35;
+}
+
+/* Document Table */
+.tableWrapper {
+  overflow-x: auto;
+  margin-top: var(--space-6);
+  border-radius: 8px;
+  border: 1px solid var(--color-border, #e5e2dc);
+}
+
+.docTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.docTable th {
+  background: var(--bg-secondary, #f8f7f5);
+  color: var(--text-primary, #1a1917);
+  font-weight: 700;
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  border-bottom: 2px solid var(--color-border, #e5e2dc);
+  white-space: nowrap;
+}
+
+.docTable td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border, #e5e2dc);
+  color: var(--text-secondary, #5a5855);
+  vertical-align: top;
+}
+
+.docTable tr:last-child td {
+  border-bottom: none;
+}
+
+.docTable tr:hover td {
+  background: var(--bg-secondary, #f8f7f5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .issueGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .flowCard {
+    grid-template-columns: 1fr;
+  }
+
+  .flowNum {
+    width: 40px;
+    height: 40px;
+    font-size: 0.875rem;
+  }
+
+  .serviceGrid {
+    grid-template-columns: 1fr;
+  }
+}

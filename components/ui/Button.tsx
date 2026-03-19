@@ -77,8 +77,10 @@ export default function Button(props: ButtonProps) {
   const buttonRest = rest as ButtonAsButton;
   return (
     <button
+      type={buttonRest.type || 'button'}
       className={classNames}
       disabled={loading || buttonRest.disabled}
+      aria-busy={loading ? 'true' : undefined}
       {...buttonRest}
     >
       {loading && <span className={styles.spinner} aria-hidden="true" />}

@@ -7,15 +7,39 @@
   font-weight: var(--font-semibold);
   border-radius: var(--radius-md);
   transition:
-    background-color var(--duration-fast) var(--ease-out),
-    color var(--duration-fast) var(--ease-out),
-    box-shadow var(--duration-fast) var(--ease-out),
-    transform var(--duration-fast) var(--ease-out);
+    background-color var(--duration-normal) var(--ease-out),
+    color var(--duration-normal) var(--ease-out),
+    box-shadow var(--duration-normal) var(--ease-out),
+    transform 200ms var(--ease-spring),
+    border-color var(--duration-normal) var(--ease-out),
+    letter-spacing var(--duration-normal) var(--ease-out);
   cursor: pointer;
   white-space: nowrap;
   text-decoration: none;
   position: relative;
   overflow: hidden;
+  letter-spacing: var(--tracking-normal);
+}
+
+/* ── Shimmer (光沢スウィープ) ── */
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.18) 50%,
+    transparent 60%
+  );
+  background-size: 200% 100%;
+  background-position: 200% center;
+  transition: background-position 400ms var(--ease-out);
+  pointer-events: none;
+}
+
+.button:hover::before {
+  background-position: -50% center;
 }
 
 .button:focus-visible {
@@ -50,18 +74,22 @@
 .button--primary {
   background-color: var(--accent-primary);
   color: var(--text-inverse);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 8px rgba(26, 58, 92, 0.25);
 }
 
 .button--primary:hover {
   background-color: var(--accent-primary-hover);
-  box-shadow: var(--shadow-md), 0 0 20px var(--accent-glow);
-  transform: translateY(-2px);
+  box-shadow:
+    0 8px 24px rgba(26, 58, 92, 0.30),
+    0 0 0 4px rgba(26, 58, 92, 0.10),
+    0 0 32px rgba(26, 58, 92, 0.15);
+  transform: translateY(-3px);
+  letter-spacing: 0.025em;
 }
 
 .button--primary:active {
   transform: translateY(0);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 8px rgba(26, 58, 92, 0.25);
 }
 
 /* ── Secondary ── */
@@ -71,10 +99,30 @@
   border: 1.5px solid var(--accent-primary);
 }
 
+.button--secondary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent-primary);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 240ms var(--ease-out);
+  z-index: 0;
+}
+
+.button--secondary > * {
+  position: relative;
+  z-index: 1;
+}
+
 .button--secondary:hover {
-  background-color: var(--accent-primary-light);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-sm);
+  color: var(--text-inverse);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 58, 92, 0.2);
+}
+
+.button--secondary:hover::after {
+  transform: scaleY(1);
 }
 
 /* ── Ghost ── */
@@ -86,6 +134,7 @@
 .button--ghost:hover {
   background-color: var(--bg-secondary);
   color: var(--text-primary);
+  transform: translateY(-1px);
 }
 
 /* ── Link ── */
@@ -94,12 +143,27 @@
   color: var(--text-link);
   padding: 0;
   min-height: auto;
+  gap: var(--space-1);
+}
+
+.button--link::before {
+  display: none; /* shimmerを無効化 */
 }
 
 .button--link:hover {
   color: var(--accent-primary-hover);
-  text-decoration: underline;
+  text-decoration: none;
   transform: none;
+  gap: 0;
+}
+
+.button--link:hover .icon {
+  transform: translateX(3px);
+}
+
+/* ── Full Rounded ── */
+.button--rounded {
+  border-radius: var(--radius-full);
 }
 
 /* ── States ── */

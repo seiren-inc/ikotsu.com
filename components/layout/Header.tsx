@@ -12,12 +12,22 @@ const NAV_ITEMS = [
     href: '/services',
     dropdown: [
       { label: '粉骨', href: '/services/powdered', description: '遺骨を細かく砕く専門処理' },
-      { label: '洗骨', href: '/services/cleaning', description: 'カビ・汚れの除去と洗浄' },
+      { label: '洗骨', href: '/services/cleaning', description: 'カビ・六価クロムの除去と洗浄' },
+      { label: '洗骨+粉骨セット', href: '/services/washing-and-pulverization', description: '墓からの遺骨に推奨' },
       { label: '出張・搬送', href: '/services/carrying', description: '全国対応の出張引取り' },
       { label: 'お引取り', href: '/services/takeout', description: '遠方・高齢の方向け' },
+      { label: '工程公開', href: '/process', description: '全工程・チェック基準を公開' },
     ],
   },
-  { label: '法人の方へ', href: '/for-corporate' },
+  {
+    label: '法人の方へ',
+    href: '/corporate',
+    dropdown: [
+      { label: '法人窓口ハブ', href: '/corporate', description: 'SLA・発行書類一覧' },
+      { label: '委託フロー・SLA', href: '/corporate/flow', description: '導入までの4ステップ' },
+      { label: 'お問い合わせ・資料請求', href: '/for-corporate', description: '法人専用フォーム' },
+    ],
+  },
   { label: 'ガイド', href: '/guide' },
   { label: '料金目安', href: '/pricing' },
   { label: '会社情報', href: '/company' },
@@ -91,6 +101,18 @@ export default function Header() {
                   'dropdown' in item ? () => handleDropdownEnter(item.label) : undefined
                 }
                 onMouseLeave={'dropdown' in item ? handleDropdownLeave : undefined}
+                onFocus={
+                  'dropdown' in item ? () => handleDropdownEnter(item.label) : undefined
+                }
+                onBlur={
+                  'dropdown' in item
+                    ? (e) => {
+                        if (!e.currentTarget.contains(e.relatedTarget)) {
+                          handleDropdownLeave();
+                        }
+                      }
+                    : undefined
+                }
               >
                 <Link
                   href={item.href}

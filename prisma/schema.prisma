@@ -1,0 +1,427 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  schemas  = ["core", "crm", "ikotsu", "ohaka"]
+}
+
+model CrmInquiry {
+  id                     String               @id @db.Uuid
+  site_id                String?              @db.Uuid
+  source_domain          String?
+  inquiry_channel        String
+  inquiry_type           String?
+  status                 String               @default("new")
+  last_name              String?
+  first_name             String?
+  last_name_kana         String?
+  first_name_kana        String?
+  organization_name      String?
+  contact_person         String?
+  email                  String?
+  phone                  String?
+  postal_code            String?
+  prefecture             String?
+  city                   String?
+  address_detail         String?
+  subject                String?
+  content                String?
+  preferred_contact      String?
+  preferred_datetime     String?
+  assigned_admin_user_id String?
+  memo                   String?
+  ip_address             String?
+  user_agent             String?
+  raw_payload            Json?
+  created_at             DateTime             @default(now()) @db.Timestamptz(6)
+  updated_at             DateTime             @default(now()) @db.Timestamptz(6)
+  deleted_at             DateTime?            @db.Timestamptz(6)
+  admin_users            admin_users?         @relation(fields: [assigned_admin_user_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  sites                  sites?               @relation(fields: [site_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  details                IkotsuInquiryDetail?
+  inquiry_details        inquiry_details?
+
+  @@index([created_at(sort: Desc)])
+  @@index([inquiry_channel])
+  @@index([site_id])
+  @@index([status])
+  @@map("inquiries")
+  @@schema("crm")
+}
+
+model IkotsuInquiryDetail {
+  inquiry_id            String     @id @db.Uuid
+  inquiry_segment       String
+  corporate_name        String?
+  contact_person        String?
+  position              String?
+  monthly_volume        Int?
+  corporate_type        String?
+  requested_model       String?
+  related_simulation_id String?    @db.Uuid
+  related_diagnosis_id  String?    @db.Uuid
+  assigned_staff_id     String?
+  deleted_at            DateTime?  @db.Timestamptz(6)
+  created_at            DateTime   @default(now()) @db.Timestamptz(6)
+  updated_at            DateTime   @default(now()) @db.Timestamptz(6)
+  inquiry               CrmInquiry @relation(fields: [inquiry_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([inquiry_segment], map: "ikotsu_inquiry_details_inquiry_segment_idx")
+  @@index([related_diagnosis_id], map: "ikotsu_inquiry_details_related_diagnosis_id_idx")
+  @@index([related_simulation_id], map: "ikotsu_inquiry_details_related_simulation_id_idx")
+  @@map("inquiry_details")
+  @@schema("ikotsu")
+}
+
+model IkotsuDiagnosisLog {
+  id                  String   @id @db.Uuid
+  session_id          String?  @db.VarChar
+  bone_condition      String?  @db.VarChar
+  future_plan         String?  @db.VarChar
+  storage_period      String?  @db.VarChar
+  anxiety_type        String?  @db.VarChar
+  recommended_service String?  @db.VarChar
+  ip_address          String?  @db.Inet
+  user_agent          String?
+  created_at          DateTime @default(now()) @db.Timestamptz(6)
+
+  @@index([created_at(sort: Desc)], map: "ikotsu_diagnosis_logs_created_at_idx")
+  @@index([session_id], map: "ikotsu_diagnosis_logs_session_id_idx")
+  @@map("diagnosis_logs")
+  @@schema("ikotsu")
+}
+
+model IkotsuSimulationLog {
+  id              String   @id @db.Uuid
+  session_id      String?  @db.VarChar
+  simulation_type String?  @db.VarChar
+  input_payload   Json?
+  result_payload  Json?
+  ip_address      String?  @db.Inet
+  user_agent      String?
+  created_at      DateTime @default(now()) @db.Timestamptz(6)
+
+  @@index([created_at(sort: Desc)], map: "ikotsu_simulation_logs_created_at_idx")
+  @@index([session_id], map: "ikotsu_simulation_logs_session_id_idx")
+  @@index([simulation_type], map: "ikotsu_simulation_logs_simulation_type_idx")
+  @@map("simulation_logs")
+  @@schema("ikotsu")
+}
+
+model IkotsuDocumentDownload {
+  id             String         @id @db.Uuid
+  document_id    String         @db.Uuid
+  corporate_name String?        @db.VarChar
+  email          String?        @db.VarChar
+  ip_address     String?        @db.Inet
+  created_at     DateTime       @default(now()) @db.Timestamptz(6)
+  documents      IkotsuDocument @relation(fields: [document_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([created_at(sort: Desc)], map: "ikotsu_document_downloads_created_at_idx")
+  @@index([document_id], map: "ikotsu_document_downloads_document_id_idx")
+  @@index([email], map: "ikotsu_document_downloads_email_idx")
+  @@map("document_downloads")
+  @@schema("ikotsu")
+}
+
+model IkotsuServiceCatalog {
+  id                String            @id @db.Uuid
+  slug              String            @unique @db.VarChar
+  name              String            @db.VarChar
+  short_description String?
+  description       String?
+  category          String?           @db.VarChar
+  sort_order        Int               @default(0)
+  is_active         Boolean           @default(true)
+  created_at        DateTime          @default(now()) @db.Timestamptz(6)
+  updated_at        DateTime          @default(now()) @db.Timestamptz(6)
+  priceRules        IkotsuPriceRule[]
+
+  @@index([category], map: "ikotsu_service_catalog_category_idx")
+  @@index([is_active], map: "ikotsu_service_catalog_is_active_idx")
+  @@index([sort_order], map: "ikotsu_service_catalog_sort_order_idx")
+  @@map("service_catalog")
+  @@schema("ikotsu")
+}
+
+model IkotsuPriceRule {
+  id             String               @id @db.Uuid
+  service_id     String               @db.Uuid
+  rule_type      String?              @db.VarChar
+  label          String               @db.VarChar
+  description    String?
+  price_amount   Int?
+  is_percentage  Boolean              @default(false)
+  is_active      Boolean              @default(true)
+  sort_order     Int                  @default(0)
+  created_at     DateTime             @default(now()) @db.Timestamptz(6)
+  serviceCatalog IkotsuServiceCatalog @relation(fields: [service_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([is_active], map: "ikotsu_price_rules_is_active_idx")
+  @@index([rule_type], map: "ikotsu_price_rules_rule_type_idx")
+  @@index([service_id], map: "ikotsu_price_rules_service_id_idx")
+  @@index([sort_order], map: "ikotsu_price_rules_sort_order_idx")
+  @@map("price_rules")
+  @@schema("ikotsu")
+}
+
+model IkotsuDocument {
+  id                 String                   @id @db.Uuid
+  title              String                   @db.VarChar
+  description        String?
+  file_url           String
+  document_type      String?                  @db.VarChar
+  is_active          Boolean                  @default(true)
+  download_count     Int                      @default(0)
+  created_at         DateTime                 @default(now()) @db.Timestamptz(6)
+  document_downloads IkotsuDocumentDownload[]
+
+  @@index([document_type], map: "ikotsu_documents_document_type_idx")
+  @@index([is_active], map: "ikotsu_documents_is_active_idx")
+  @@map("documents")
+  @@schema("ikotsu")
+}
+
+model IkotsuSeoArticle {
+  id               String    @id @db.Uuid
+  slug             String    @unique @db.VarChar
+  title            String    @db.VarChar
+  meta_description String?   @db.VarChar
+  category         String?   @db.VarChar
+  content_json     Json?
+  author           String?   @db.VarChar
+  is_published     Boolean   @default(false)
+  published_at     DateTime? @db.Timestamptz(6)
+  created_at       DateTime  @default(now()) @db.Timestamptz(6)
+  updated_at       DateTime  @default(now()) @db.Timestamptz(6)
+
+  @@index([category], map: "ikotsu_seo_articles_category_idx")
+  @@index([is_published], map: "ikotsu_seo_articles_is_published_idx")
+  @@index([published_at(sort: Desc)], map: "ikotsu_seo_articles_published_at_idx")
+  @@map("seo_articles")
+  @@schema("ikotsu")
+}
+
+model IkotsuFaqItem {
+  id           String   @id @db.Uuid
+  category     String?  @db.VarChar
+  question     String
+  answer       String
+  sort_order   Int      @default(0)
+  is_published Boolean  @default(false)
+  page_slug    String?  @db.VarChar
+  created_at   DateTime @default(now()) @db.Timestamptz(6)
+  updated_at   DateTime @default(now()) @db.Timestamptz(6)
+
+  @@index([category], map: "ikotsu_faq_items_category_idx")
+  @@index([is_published], map: "ikotsu_faq_items_is_published_idx")
+  @@index([page_slug], map: "ikotsu_faq_items_page_slug_idx")
+  @@index([sort_order], map: "ikotsu_faq_items_sort_order_idx")
+  @@map("faq_items")
+  @@schema("ikotsu")
+}
+
+model admin_users {
+  id               String       @id
+  supabase_user_id String?      @unique @db.Uuid
+  email            String       @unique
+  role             String
+  is_active        Boolean      @default(true)
+  created_at       DateTime     @default(now()) @db.Timestamptz(6)
+  updated_at       DateTime     @default(now()) @db.Timestamptz(6)
+  inquiries        CrmInquiry[]
+
+  @@schema("core")
+}
+
+model sites {
+  id         String       @id @db.Uuid
+  code       String       @unique
+  name       String
+  domain     String?
+  is_active  Boolean      @default(true)
+  created_at DateTime     @default(now()) @db.Timestamptz(6)
+  updated_at DateTime     @default(now()) @db.Timestamptz(6)
+  event_logs event_logs[]
+  inquiries  CrmInquiry[]
+
+  @@schema("core")
+}
+
+model event_logs {
+  id           String   @id @db.Uuid
+  site_id      String?  @db.Uuid
+  event_type   String?  @db.VarChar
+  event_name   String?  @db.VarChar
+  related_id   String?
+  related_type String?  @db.VarChar
+  metadata     Json?
+  ip_address   String?  @db.Inet
+  user_agent   String?
+  created_at   DateTime @default(now()) @db.Timestamptz(6)
+  sites        sites?   @relation(fields: [site_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([created_at(sort: Desc)], map: "crm_event_logs_created_at_idx")
+  @@index([event_name], map: "crm_event_logs_event_name_idx")
+  @@index([event_type], map: "crm_event_logs_event_type_idx")
+  @@index([site_id], map: "crm_event_logs_site_id_idx")
+  @@schema("crm")
+}
+
+model contracts {
+  id                   String    @id
+  temple_id            String
+  representative_name  String?
+  representative_title String?
+  contact_email        String?
+  plan_type            String?
+  agreed_at            DateTime? @db.Timestamptz(6)
+  agreed_ip            String?
+  contract_version     String?
+  contract_hash        String?
+  pdf_url              String?
+  status               String?
+  terminated_at        DateTime? @db.Timestamptz(6)
+  created_at           DateTime  @default(now()) @db.Timestamptz(6)
+  updated_at           DateTime  @default(now()) @db.Timestamptz(6)
+  temples              temples   @relation(fields: [temple_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([contact_email])
+  @@index([status])
+  @@index([temple_id])
+  @@schema("ohaka")
+}
+
+model inquiry_details {
+  inquiry_id           String     @id @db.Uuid
+  temple_id            String?
+  temple_name_snapshot String?
+  plan_id              String?
+  plan_name            String?
+  inquiry_kind         String?
+  category             String?
+  user_payload         Json?
+  context              Json?
+  message              String?
+  preferred_datetime   String?
+  admin_notes          String?
+  organization_name    String?
+  created_at           DateTime   @default(now()) @db.Timestamptz(6)
+  updated_at           DateTime   @default(now()) @db.Timestamptz(6)
+  inquiries            CrmInquiry @relation(fields: [inquiry_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  plans                plans?     @relation(fields: [plan_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  temples              temples?   @relation(fields: [temple_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([inquiry_kind], map: "ohaka_inquiry_details_inquiry_kind_idx")
+  @@index([plan_id], map: "ohaka_inquiry_details_plan_id_idx")
+  @@index([temple_id], map: "ohaka_inquiry_details_temple_id_idx")
+  @@schema("ohaka")
+}
+
+model plans {
+  id              String            @id
+  temple_id       String
+  category        String?
+  name            String
+  sub_description String?
+  price           Int?
+  price_note      String?
+  management_fee  Int?
+  availability    String?
+  burial_method   String?
+  period_type     String?
+  period_years    Int?
+  capacity        String?
+  capacity_note   String?
+  pet_allowed     String?
+  images          String[]
+  note            String?
+  sort_order      Int?
+  created_at      DateTime          @default(now()) @db.Timestamptz(6)
+  updated_at      DateTime          @default(now()) @db.Timestamptz(6)
+  inquiry_details inquiry_details[]
+  temples         temples           @relation(fields: [temple_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([category])
+  @@index([sort_order])
+  @@index([temple_id])
+  @@schema("ohaka")
+}
+
+model temple_users {
+  id           String   @id
+  temple_id    String
+  auth_user_id String?  @unique @db.Uuid
+  email        String   @unique
+  is_active    Boolean  @default(true)
+  created_at   DateTime @default(now()) @db.Timestamptz(6)
+  updated_at   DateTime @default(now()) @db.Timestamptz(6)
+  temples      temples  @relation(fields: [temple_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([temple_id])
+  @@schema("ohaka")
+}
+
+model temples {
+  id                       String            @id
+  name                     String
+  kana                     String?
+  type                     String?
+  management_body          String?
+  religion                 String?
+  buddhist_sect            String?
+  prefecture               String?
+  prefecture_code          Int?
+  city_name                String?
+  address_line             String?
+  address                  String?
+  zip_code                 String?
+  lat                      Float?
+  lng                      Float?
+  access                   String?
+  parking_available        Boolean           @default(false)
+  parking                  String?
+  indoor_outdoor           String?
+  barrier_free             Boolean           @default(false)
+  barrier_free_label       String?
+  pet_allowed              String?
+  pet_support              String?
+  sects                    String[]
+  supported_memorial_types String[]
+  nearest_stations         Json?
+  price_agg_min            Int?
+  price_agg_max            Int?
+  management_fee_agg_type  String?
+  catchphrase              String?
+  overview                 String?
+  suitable_for             String[]
+  notes_points             String[]
+  tags                     String[]
+  ai_summary               String?
+  main_image               String?
+  gallery_images           String[]
+  phone                    String?
+  office_hours             String?
+  status                   String?
+  listed_in_search         Boolean           @default(true)
+  successor_requirements   String?
+  seo                      Json?
+  calendar                 Json?
+  key_features             Json?
+  created_at               DateTime          @default(now()) @db.Timestamptz(6)
+  updated_at               DateTime          @default(now()) @db.Timestamptz(6)
+  contracts                contracts[]
+  inquiry_details          inquiry_details[]
+  plans                    plans[]
+  temple_users             temple_users[]
+
+  @@index([city_name])
+  @@index([listed_in_search])
+  @@index([prefecture])
+  @@index([status])
+  @@schema("ohaka")
+}
