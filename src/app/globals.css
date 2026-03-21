@@ -37,6 +37,10 @@ body {
   overflow-x: hidden;
 }
 
+:root {
+  --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+}
+
 /* ── Typography ── */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
@@ -246,6 +250,9 @@ main {
 }
 
 @media (max-width: 768px) {
+  main {
+    padding-bottom: calc(84px + var(--safe-area-inset-bottom));
+  }
   h1 { font-size: var(--text-2xl); }
   h2 { font-size: var(--text-xl); }
   .container {
@@ -337,3 +344,22 @@ article a:hover,
   }
 }
 
+/* UIUX-Guard: mobile tiny text normalization */
+@media (max-width: 767px) {
+  .text-\[9px\],
+  .text-\[10px\],
+  .text-\[11px\] {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+
+  [style*="font-size: 12px"],
+  [style*="font-size: 12px"],
+  [style*="font-size: 12px"],
+  [style*="font-size: 12px"],
+  [style*="font-size: 12px"],
+  [style*="font-size: 12px"] {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+}
