@@ -1,91 +1,56 @@
-import Link from 'next/link';
-import styles from './Button.module.css';
-import { type ReactNode, type ButtonHTMLAttributes, type AnchorHTMLAttributes } from 'react';
+import * as React from "react"
+import { Slot } from "@radix-ui/react-slot"
+import { cva, type VariantProps } from "class-variance-authority"
 
-type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'link';
-type ButtonSize = 'sm' | 'md' | 'lg';
+import { cn } from "@/lib/utils"
 
-interface ButtonBaseProps {
-  variant?: ButtonVariant;
-  size?: ButtonSize;
-  children: ReactNode;
-  className?: string;
-  loading?: boolean;
-  icon?: ReactNode;
-}
-
-type ButtonAsButton = ButtonBaseProps &
-  Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof ButtonBaseProps> & {
-    href?: never;
-  };
-
-type ButtonAsLink = ButtonBaseProps &
-  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof ButtonBaseProps> & {
-    href: string;
-    external?: boolean;
-  };
-
-type ButtonProps = ButtonAsButton | ButtonAsLink;
-
-export default function Button(props: ButtonProps) {
-  const {
-    variant = 'primary',
-    size = 'md',
-    children,
-    className = '',
-    loading = false,
-    icon,
-    ...rest
-  } = props;
-
-  const classNames = [
-    styles.button,
-    styles[`button--${variant}`],
-    styles[`button--${size}`],
-    loading ? styles['button--loading'] : '',
-    className,
-  ]
-    .filter(Boolean)
-    .join(' ');
-
-  if ('href' in rest && rest.href) {
-    const { href, external, ...linkRest } = rest as ButtonAsLink & { external?: boolean };
-
-    if (external) {
-      return (
-        <a
-          href={href}
-          className={classNames}
-          target="_blank"
-          rel="noopener noreferrer"
-          {...linkRest}
-        >
-          {icon && <span className={styles.icon}>{icon}</span>}
-          <span>{children}</span>
-        </a>
-      );
-    }
-
-    return (
-      <Link href={href} className={classNames} {...linkRest}>
-        {icon && <span className={styles.icon}>{icon}</span>}
-        <span>{children}</span>
-      </Link>
-    );
+const buttonVariants = cva(
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  {
+    variants: {
+      variant: {
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        destructive:
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        outline:
+          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary:
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+      },
+      size: {
+        default: "h-10 px-4 py-2",
+        sm: "h-9 rounded-md px-3",
+        lg: "h-11 rounded-md px-8",
+        icon: "h-10 w-10",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
   }
+)
 
-  const buttonRest = rest as ButtonAsButton;
-  return (
-    <button
-      type={buttonRest.type || 'button'}
-      className={classNames}
-      disabled={loading || buttonRest.disabled}
-      aria-busy={loading ? 'true' : undefined}
-      {...buttonRest}
-    >
-      {loading && <span className={styles.spinner} aria-hidden="true" />}
-      {icon && !loading && <span className={styles.icon}>{icon}</span>}
-      <span>{children}</span>
-    </button>
-  );
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean
 }
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button"
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    )
+  }
+)
+Button.displayName = "Button"
+
+export { Button, buttonVariants }
