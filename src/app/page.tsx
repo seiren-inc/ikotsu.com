@@ -11,6 +11,7 @@ import CaseAuthority from '@/components/sections/CaseAuthority';
 import Testimonials from '@/components/sections/Testimonials';
 import GuideHub from '@/components/sections/GuideHub';
 import CorporateCTA from '@/components/sections/CorporateCTA';
+import B2CCTA from '@/components/sections/B2CCTA';
 import FAQPreview from '@/components/sections/FAQPreview';
 import RelatedServices from '@/components/sections/RelatedServices';
 import { JsonLd, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/schema/jsonld';
@@ -78,11 +79,14 @@ export default async function Home() {
       {/* ⑪ ガイド記事ハブ */}
       <GuideHub />
 
-      {/* ⑫ 法人向けCTA */}
-      <CorporateCTA />
-
-      {/* ⑬ FAQ */}
+      {/* ⑫ FAQ */}
       <FAQPreview faqs={faqs} />
+
+      {/* ⑬ 個人向け最終CTA */}
+      <B2CCTA />
+
+      {/* ⑭ 法人向けCTA */}
+      <CorporateCTA />
 
       {/* ⑭ 関連サービス */}
       <RelatedServices />

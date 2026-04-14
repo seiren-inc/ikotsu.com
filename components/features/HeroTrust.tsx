@@ -3,6 +3,9 @@
 import { useReducedMotion } from 'framer-motion';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import styles from './HeroTrust.module.css';
 
 const TRUST_BADGES = [
@@ -15,14 +18,49 @@ const TRUST_BADGES = [
 
 export default function HeroTrust() {
   const shouldReduceMotion = useReducedMotion();
+  const container = useRef<HTMLDivElement>(null);
+  const blob1Ref = useRef<HTMLDivElement>(null);
+  const blob2Ref = useRef<HTMLDivElement>(null);
+  const blob3Ref = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (shouldReduceMotion) return;
+
+    const animateBlob = (el: HTMLDivElement | null, duration: number) => {
+      if (!el) return;
+      gsap.to(el, {
+        x: 'random(-60, 60)',
+        y: 'random(-40, 40)',
+        scale: 'random(0.9, 1.15)',
+        duration: duration,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut',
+      });
+      
+      // モーフィング演出 (Border Radius)
+      gsap.to(el, {
+        borderRadius: () => `${gsap.utils.random(40, 70)}% ${gsap.utils.random(30, 60)}% ${gsap.utils.random(50, 80)}% ${gsap.utils.random(30, 50)}% / ${gsap.utils.random(40, 60)}% ${gsap.utils.random(40, 70)}% ${gsap.utils.random(30, 50)}% ${gsap.utils.random(50, 80)}%`,
+        duration: duration * 0.8,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut',
+      });
+    };
+
+    animateBlob(blob1Ref.current, 12);
+    animateBlob(blob2Ref.current, 15);
+    animateBlob(blob3Ref.current, 18);
+
+  }, { scope: container, dependencies: [shouldReduceMotion] });
 
   return (
-    <section className={styles.hero} aria-label="トラスト・ヒーローセクション">
+    <section ref={container} className={styles.hero} aria-label="トラスト・ヒーローセクション">
       {/* 流体モーフィング背景 */}
       <div className={styles.morphBg} aria-hidden="true">
-        <div className={`${styles.blob} ${styles.blob1} ${shouldReduceMotion ? styles.blobReduced : ''}`} />
-        <div className={`${styles.blob} ${styles.blob2} ${shouldReduceMotion ? styles.blobReduced : ''}`} />
-        <div className={`${styles.blob} ${styles.blob3} ${shouldReduceMotion ? styles.blobReduced : ''}`} />
+        <div ref={blob1Ref} className={`${styles.blob} ${styles.blob1}`} />
+        <div ref={blob2Ref} className={`${styles.blob} ${styles.blob2}`} />
+        <div ref={blob3Ref} className={`${styles.blob} ${styles.blob3}`} />
         <div className={styles.noiseOverlay} />
       </div>
 

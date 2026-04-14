@@ -42,3 +42,33 @@ next-env.d.ts
 
 /src/generated/prisma
 .env.local
+.env.*.local
+
+# caches & build tools
+.turbo/
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+.swc
+
+# OS junk
+Thumbs.db
+
+# editor
+.idea/
+.vscode/workspace-settings.json
+
+# temp / swap
+*.tmp
+*.swp
+*.swo
+*~
+*.iml
+
+# python (monorepo safety)
+venv/
+env/
+.venv/
+__pycache__/
+*.pyc
