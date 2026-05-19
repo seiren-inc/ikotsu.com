@@ -1,37 +1,44 @@
 /* ================================================
-   Ikotsu.com Design System Tokens  v2.0
+   Ikotsu.com Design System Tokens  v3.0
+   テーマ: 静謐と品格 — #DB833B オレンジパレット
    ================================================ */
 
 :root {
   /* ── Color: Background ── */
-  --bg-primary: #FAFAF8;           /* ウォームオフホワイト */
-  --bg-secondary: #F2F1EE;         /* ウォームグレー */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #FCEAE8;          /* サイドバー背景 */
   --bg-elevated: #FFFFFF;
-  --bg-dark: #0E1E35;              /* 深いネイビー（フッター・ダークセクション） */
-  --bg-overlay: rgba(10, 22, 40, 0.65);
+  --bg-dark: #2D1508;               /* 温かい漆黒（フッター） */
+  --bg-overlay: rgba(45, 21, 8, 0.65);
 
   /* ── Color: Text ── */
-  --text-primary: #0E1E35;
-  --text-secondary: #3D4F63;
-  --text-muted: #7A8EA3;
+  --text-primary: #000000;
+  --text-secondary: #4A3020;
+  --text-muted: #8A6A50;
   --text-inverse: #FFFFFF;
-  --text-link: #1A3A5C;
+  --text-link: #AF7749;
 
   /* ── Color: Accent ── */
-  --accent-primary: #1A3A5C;        /* 深いネイビー */
-  --accent-primary-hover: #24507A;
-  --accent-primary-light: #E6EFF8;
-  --accent-secondary: #0D2238;      /* より深いネイビー */
-  --accent-secondary-hover: #152E50;
-  --accent-gold: #B8963E;           /* 深みゴールド */
-  --accent-gold-light: rgba(184, 150, 62, 0.1);
-  --accent-glow: rgba(26, 58, 92, 0.15);
+  --accent-primary: #DB833B;        /* テーマカラー */
+  --accent-primary-hover: #C47030;
+  --accent-primary-light: #FCEAE8;
+  --accent-secondary: #AF7749;      /* メニュー */
+  --accent-secondary-hover: #96643A;
+  --accent-gold: #DB833B;
+  --accent-gold-light: rgba(219, 131, 59, 0.1);
+  --accent-glow: rgba(219, 131, 59, 0.15);
 
   /* ── Color: Border ── */
-  --border-light: #E8E6E0;
-  --border-default: #CCC8BF;
-  --border-strong: #9CA8B8;
-  --border-focus: #1A3A5C;
+  --border-light: #F5E8DF;
+  --border-default: #E8D0BE;
+  --border-strong: #C8A080;
+  --border-focus: #DB833B;
+
+  /* ── Color: Heading ── */
+  --color-h1: #DE7234;              /* 本文見出し1 */
+  --color-h2: #F1B17D;              /* 本文見出し2 */
+  --color-sidebar-heading: #F6C1BB;
+  --color-sidebar-bg: #FCEAE8;
 
   /* ── Color: State ── */
   --state-success: #2d8a4e;
@@ -87,18 +94,18 @@
   --space-24: 6rem;    /* 96px */
   --space-32: 8rem;    /* 128px */
 
-  /* ── Border Radius（現代化） ── */
+  /* ── Border Radius ── */
   --radius-sm: 4px;
-  --radius-md: 10px;   /* 8px → 10px */
-  --radius-lg: 16px;   /* 12px → 16px */
-  --radius-xl: 20px;   /* 16px → 20px */
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
   --radius-full: 9999px;
 
-  /* ── Shadow（質感強化） ── */
-  --shadow-sm:    0 1px 3px rgba(10, 22, 40, 0.06), 0 1px 2px rgba(10, 22, 40, 0.04);
-  --shadow-md:    0 4px 16px rgba(10, 22, 40, 0.10), 0 2px 6px rgba(10, 22, 40, 0.06);
-  --shadow-lg:    0 12px 32px rgba(10, 22, 40, 0.14), 0 4px 12px rgba(10, 22, 40, 0.08);
-  --shadow-hover: 0 20px 48px rgba(10, 22, 40, 0.18), 0 6px 16px rgba(10, 22, 40, 0.10);
+  /* ── Shadow ── */
+  --shadow-sm:    0 1px 3px rgba(45, 21, 8, 0.06), 0 1px 2px rgba(45, 21, 8, 0.04);
+  --shadow-md:    0 4px 16px rgba(45, 21, 8, 0.10), 0 2px 6px rgba(45, 21, 8, 0.06);
+  --shadow-lg:    0 12px 32px rgba(45, 21, 8, 0.12), 0 4px 12px rgba(45, 21, 8, 0.07);
+  --shadow-hover: 0 20px 48px rgba(45, 21, 8, 0.16), 0 6px 16px rgba(45, 21, 8, 0.09);
 
   /* ── Motion: Duration ── */
   --duration-fast: 150ms;
@@ -130,7 +137,7 @@
   --z-modal: 500;
   --z-toast: 600;
 
-  /* ── Legacy Tokens (エイリアス: 古いCSS互換用) ── */
+  /* ── Legacy Tokens (エイリアス) ── */
   --color-primary: var(--accent-primary);
   --color-secondary: var(--accent-secondary);
   --color-surface: var(--bg-elevated);
@@ -138,14 +145,14 @@
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-border: var(--border-default);
-  
+
   --font-size-xs: var(--text-xs);
   --font-size-sm: var(--text-sm);
   --font-size-base: var(--text-base);
-  
+
   --transition-base: var(--duration-normal) var(--ease-out);
-  
-  --shadow-xl: 0 20px 25px -5px rgba(10, 22, 40, 0.1), 0 10px 10px -5px rgba(10, 22, 40, 0.04);
+
+  --shadow-xl: 0 20px 25px -5px rgba(45, 21, 8, 0.1), 0 10px 10px -5px rgba(45, 21, 8, 0.04);
   --radius-2xl: 24px;
   --leading-snug: 1.375;
 }

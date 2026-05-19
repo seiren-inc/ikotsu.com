@@ -15,7 +15,7 @@ const SERVICES = [
     duration: '3〜5営業日',
     features: ['六価クロム還元処理', 'UV殺菌・乾燥', '専用真空パック（1個）', '写真付き完了報告書'],
     href: '/services/powdered',
-    accentColor: '#3399CC',
+    accentColor: '#DB833B',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
         <path d="M16 4C16 4 8 12 8 19C8 23.418 11.582 27 16 27C20.418 27 24 23.418 24 19C24 12 16 4 16 4Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
@@ -33,7 +33,7 @@ const SERVICES = [
     duration: '5〜7営業日',
     features: ['超音波洗浄', '専用薬液処理', '完全乾燥'],
     href: '/services/cleaning',
-    accentColor: '#50C878',
+    accentColor: '#DE7234',
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
         <path d="M7 14C7 10.134 10.134 7 14 7C17.866 7 21 10.134 21 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
@@ -52,7 +52,7 @@ const SERVICES = [
     duration: 'ご希望日時ご相談',
     features: ['専門スタッフ対応', '専用車両', '全国47都道府県対応'],
     href: '/services/carrying',
-    accentColor: '#B8963E',
+    accentColor: '#AF7749',
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
         <rect x="2" y="10" width="18" height="12" rx="2" stroke="currentColor" strokeWidth="1.5"/>
@@ -72,7 +72,7 @@ const SERVICES = [
     duration: '最短即日手配',
     features: ['専用梱包キット送付', 'ゆうパック対応', '到着後即時報告'],
     href: '/services/takeout',
-    accentColor: '#DC64B4',
+    accentColor: '#C47030',
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
         <rect x="5" y="8" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="1.5"/>
@@ -91,7 +91,7 @@ const SERVICES = [
     duration: 'ご相談のうえ対応',
     features: ['骨壺取出し作業', '改葬許可申請代行', '行政書類一括対応', '全国対応'],
     href: '/contact',
-    accentColor: '#9C6BC8',
+    accentColor: '#8A5530',
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
         <path d="M14 3L4 8V14C4 19.55 8.4 24.74 14 26C19.6 24.74 24 19.55 24 14V8L14 3Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
