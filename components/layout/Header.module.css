@@ -48,11 +48,11 @@
 }
 
 .logoMark {
-  color: var(--accent-secondary);
+  color: #000000;
 }
 
 .logoAccent {
-  color: var(--accent-primary);
+  color: #DB833B;
   font-weight: var(--font-semibold);
 }
 
@@ -80,7 +80,7 @@
   padding: var(--space-2) var(--space-3);
   font-size: var(--text-sm);
   font-weight: var(--font-medium);
-  color: var(--text-secondary);
+  color: #AF7749;
   text-decoration: none;
   border-radius: var(--radius-md);
   transition:
@@ -90,12 +90,12 @@
 }
 
 .navLink:hover {
-  color: var(--text-primary);
-  background: var(--bg-secondary);
+  color: #DB833B;
+  background: rgba(219, 131, 59, 0.06);
 }
 
 .navLink--active {
-  color: var(--accent-primary);
+  color: #DB833B;
   font-weight: var(--font-semibold);
 }
 
@@ -248,7 +248,7 @@
 }
 
 .mobileNavLink--active {
-  color: var(--accent-primary);
+  color: #DB833B;
 }
 
 .mobileSubList {
@@ -265,7 +265,7 @@
 }
 
 .mobileSubLink:hover {
-  color: var(--accent-primary);
+  color: #DB833B;
 }
 
 .mobileCta {

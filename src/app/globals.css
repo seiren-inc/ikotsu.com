@@ -159,7 +159,7 @@ button:focus-visible {
 }
 
 .section--alt {
-  background: linear-gradient(180deg, var(--bg-secondary) 0%, #EEECE8 100%);
+  background: #FCEAE8;
 }
 
 .section--dark {
@@ -183,7 +183,7 @@ button:focus-visible {
   display: inline-block;
   font-size: 0.7rem;
   font-weight: 700;
-  color: var(--accent-primary);
+  color: #DB833B;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: var(--space-3);
@@ -281,9 +281,9 @@ main {
     height: 3px;
     background: linear-gradient(
       90deg,
-      var(--accent-gold) 0%,
-      var(--accent-primary) 50%,
-      var(--accent-gold) 100%
+      #DB833B 0%,
+      #DE7234 50%,
+      #F1B17D 100%
     );
     transform-origin: left;
     z-index: calc(var(--z-fixed) + 10);
@@ -299,8 +299,8 @@ main {
 
 /* ── Selection Style ── */
 ::selection {
-  background-color: var(--accent-primary-light);
-  color: var(--accent-primary);
+  background-color: rgba(219, 131, 59, 0.18);
+  color: #000000;
 }
 
 /* ── Smooth Image Reveal ── */

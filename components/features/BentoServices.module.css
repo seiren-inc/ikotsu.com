@@ -59,10 +59,10 @@
 .card:hover {
   transform: translateY(-6px);
   box-shadow:
-    0 16px 48px rgba(10, 22, 40, 0.14),
-    0 4px 16px rgba(10, 22, 40, 0.08),
+    0 16px 48px rgba(45, 21, 8, 0.12),
+    0 4px 16px rgba(45, 21, 8, 0.07),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  border-color: color-mix(in srgb, var(--bento-accent, #3399CC) 25%, rgba(255,255,255,0.9));
+  border-color: color-mix(in srgb, var(--bento-accent, #DB833B) 30%, rgba(255,255,255,0.9));
 }
 
 /* ── アクセントバー ── */
@@ -72,7 +72,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: var(--bento-accent, #3399CC);
+  background: var(--bento-accent, #DB833B);
   border-radius: 24px 24px 0 0;
   opacity: 0;
   transform: scaleX(0);
@@ -102,12 +102,12 @@
   width: 52px;
   height: 52px;
   border-radius: var(--radius-lg);
-  background: color-mix(in srgb, var(--bento-accent, #3399CC) 10%, transparent);
+  background: color-mix(in srgb, var(--bento-accent, #DB833B) 10%, transparent);
   transition: background var(--duration-normal) var(--ease-out);
 }
 
 .card:hover .iconWrap {
-  background: color-mix(in srgb, var(--bento-accent, #3399CC) 16%, transparent);
+  background: color-mix(in srgb, var(--bento-accent, #DB833B) 16%, transparent);
 }
 
 .headerText {
